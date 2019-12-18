@@ -24,7 +24,7 @@
 			</div>
 
 			<div class="tags">
-			{{ $taxo := .Site.Params.tags }}
+			{{ $taxo := $.Site.Params.tags }}
 			{{ range .Param $taxo }}
 				{{ $name := . }}
 					{{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}

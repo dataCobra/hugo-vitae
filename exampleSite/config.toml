@@ -26,9 +26,6 @@ disqusShortname = "hugo-vitae"
 	# Content types to disable Disqus on.
 	disableDisqusTypes = ["page"]
 
-	# Name your tags
-	tags = "tags"
-
 	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 
 # Nav.
