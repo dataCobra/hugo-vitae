@@ -1,16 +1,22 @@
 # Vitae
-... is a blog theme for Hugo that focuses on your content. Forked from 
-[Ink](https://github.com/knadh/hugo-ink).
+... is a blog theme for Hugo that **focuses on your content** with some cool new **features**.  
+Forked from  [Hugo-Ink](https://github.com/knadh/hugo-ink).
 
 ## Demo
 ![Screenshot](https://raw.githubusercontent.com/dataCobra/hugo-vitae/master/images/screenshot.png)
 
 ## Features
-* Easy to use, even with GDPR in mind
-* Fully responsive, optimized for all kind of devices
-* Multilingual support for months and fixed strings
-* Choose every free FontAwesome icon for the social navbar
-* FontAwesome and Roboto(-Slab) as local used fonts
+
+All Features with a **(+)** infront of it are new with Vitae and form the foundation of the theme.
+For more explanation about some features, scroll down to **Features**
+
+* **(+)** Easy to use, even with GDPR in mind
+* **(+)** Optimized responsiveness for all kinds of devices
+* **(+)** Multilingual support for fixed strings
+* **(+)** Choose every free FontAwesome icon for the social navbar
+* **(+)** FontAwesome and Roboto(-Slab) as local used fonts
+* **(+)** Third party services can be completely turned off
+* Multilingual support for month names
 * Syntax highlighting
 * Custom CSS
 * RSS feeds
@@ -18,7 +24,7 @@
 * Google Analytics integration
 * Twitter cards and opengraph tags integration
 
-For more explanation about some features, scroll down to **Features**
+In the future there will be many more cool features.
 
 ## Installation
 
