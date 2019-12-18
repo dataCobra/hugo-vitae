@@ -13,3 +13,8 @@ min_version = "0.37.0"
 [author]
   name = "Benedikt 'dataCobra' Tuchen"
   homepage = "https://thinkbot.de"
+
+[original]
+    author = "Kailash Nadh"
+    homepage = "http://nadh.in"
+    repo = "https://github.com/knadh/hugo-ink"
