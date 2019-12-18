@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Vitae"
+license = "GPL-2.0"
+licenselink = "https://github.com/dataCobra/hugo-vitae/blob/master/LICENSE.md"
+description = "Vitae is a blog theme for Hugo that focuses on your content."
+homepage = "https://github.com/dataCobra/hugo-vitae"
+tags = ["modern", "minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist"]
+features = ["Blog", "Modern", "Minimal", "Responsive", "Social media links", "Syntax highlighting"]
+min_version = "0.37.0"
+
+[author]
+  name = "Benedikt 'dataCobra' Tuchen"
+  homepage = "https://thinkbot.de"
