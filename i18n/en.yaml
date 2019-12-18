@@ -1,7 +1,4 @@
 # i18n/en.yaml
-- id: info
-  translation: "theme on"
-
 - id: prevpage
   translation: "← Prev page"
 
