@@ -31,7 +31,14 @@ In the future there will be many more cool features.
 
 ## Installation
 
-change your current work directory into the root directory of your hugo site
+### Stable
+
+Download the latest stable release. It's available as `.zip` or `.tar.gz`.
+Decompress it into your `themes/` folder.
+
+### Development
+
+change your current work directory into the root directory of your hugo site 
 and clone the repository:
 
 ```sh
