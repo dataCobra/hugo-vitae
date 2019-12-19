@@ -24,12 +24,10 @@
 			</div>
 
 			<div class="tags">
-			{{ $taxo := $.Site.Params.tags }}
-			{{ range .Param $taxo }}
-				{{ $name := . }}
-					{{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
-						<a href="{{ .Permalink }}">{{ $name }}</a>
-					{{ end }}
+				{{ if ne .Type "page" }}
+							{{ range .Params.tags }}
+							<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+							{{ end }}
 				{{ end }}
 			</div>
 
