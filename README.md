@@ -16,6 +16,9 @@ For more explanation about some features, scroll down to **Features**
 * **(+)** Choose every free FontAwesome icon for the social navbar
 * **(+)** FontAwesome and Roboto(-Slab) as local used fonts
 * **(+)** Third party services can be completely turned off
+* **(+)** Name the taxonomies as you like
+* **(+)** Multiple taxonomies work flawless with single post
+* **(+)** New list of all taxonomies and tags below the post in single view
 * Multilingual support for month names
 * Syntax highlighting
 * Custom CSS
@@ -129,6 +132,23 @@ type: "page"
 
 This is some static page where you can write about yourself.
 ```
+
+### Taxonomies and Tags
+
+Since the release of version 1.0.2 it is possible to name the keywords and 
+taxonomies freely and therefore be much more flexible. Especially if you use the
+theme with a language other than English. Also, the different taxonomies will
+now be displayed below the post.
+
+Here is an example of different taxonomies in the config file:
+```
+[taxonomies]
+  tag = "tags"
+  series = "series"
+  author = "authors"
+```
+If you use one or more of these taxonomies in your posts there will be displayed
+in a new list below the content of the post.
 
 ## Credits
 
