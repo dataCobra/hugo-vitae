@@ -443,13 +443,18 @@ ul {
 .termsfloating_right {
   float: right;
   width: 80%;
-  border-top: 1px solid #eee;
 }
 
 .taxosfloating_left {
   float: left;
   width: 20%;
-  border-top: 1px solid #eee;
+}
+
+.author {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 900px) {

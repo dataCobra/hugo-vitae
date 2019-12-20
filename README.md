@@ -20,6 +20,7 @@ For more explanation about some features, scroll down to **Features**
 * **(+)** Multiple taxonomies work flawless with single post
 * **(+)** New list of all taxonomies and tags below the post in single view
 * **(+)** New array front matter notaxonomy
+* **(+)** Author/Writer display in post with extra features
 * Multilingual support for month names
 * Syntax highlighting
 * Custom CSS
@@ -167,7 +168,7 @@ under the post.
 
 With the new front matter `notaxanomy` you can specify every taxonomy that
 should **not be visible** below the content. You can also use the type page
-as explained  at **Content type** to disable the taxonomie view completely.
+as explained at **Content type** to disable the taxonomie view completely.
 
 ```md
 +++
@@ -182,6 +183,17 @@ notaxonomy = ["series","authors"]
 ```
 
 In the example above the post does only show the "tags" below the content.
+
+### Display for author/writer
+
+The author/writer can now be displayed on the content page. To activate the
+function, the option `listAuthor` must be set to `true` in the config.
+
+If you consider to give a link to the author, just use the new front matter
+`authorlink`. This option creates a link on the author name to the selected
+website.
+
+All content that has no author set, will not use this feature obviously.
 
 ## Credits
 

@@ -10,3 +10,6 @@
 
 - id: commentsdisqus
   translation: "comments powered by"
+
+- id: authorpretext
+  translation: "Written by"
