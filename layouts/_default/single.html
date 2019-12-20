@@ -25,24 +25,28 @@
 			<div class="tags">
 				{{ if ne .Type "page" }}
 				{{ $pagename := .Page.Title }}
-				{{ range $taxonomyname, $taxonomy :=  .Site.Taxonomies }}
+				{{ $notaxo := .Params.notaxonomy }}
+				{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
 					{{ with index $.Params $taxonomyname }}
 					{{ with ($.Site.GetPage (printf "/%s" $taxonomyname)) }}
-					<div style="float:left; width:20%; border-top:1px solid #eee">
-						<p>{{ $taxonomyname | humanize }}</p>
-					</div>
-					<div style="float:right; width:80%; border-top:1px solid #eee">
-						<p>
-							{{ range $key, $value := $taxonomy }}
-								{{ range $value.Pages }}
-								{{ if eq .LinkTitle $pagename }}
-									<a href="/{{ $taxonomyname }}/{{ $key }}/"> {{ $key }} </a>
+					{{ if in $notaxo $taxonomyname }}
+					{{ else }}
+						<div class="taxosfloating_left">
+							<p>{{ $taxonomyname | humanize }}</p>
+						</div>
+						<div class="termsfloating_right">
+							<p>
+								{{ range $key, $value := $taxonomy }}
+									{{ range $value.Pages }}
+									{{ if eq .LinkTitle $pagename }}
+										<a href="/{{ $taxonomyname }}/{{ $key }}/"> {{ $key }} </a>
+									{{ end }}
+									{{ end }}
 								{{ end }}
-								{{ end }}
-							{{ end }}
-						</p>
-					</div>
-					<div style="clear:both"></div>
+							</p>
+						</div>
+						<div class="clearit"></div>
+					{{ end }}
 					{{ end }}
 					{{ end }}
 				{{ end }}

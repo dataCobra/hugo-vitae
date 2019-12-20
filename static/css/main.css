@@ -436,6 +436,22 @@ ul {
   padding: 5px 0 20px 0;
 }
 
+.clearit {
+  clear: both;
+}
+
+.termsfloating_right {
+  float: right;
+  width: 80%;
+  border-top: 1px solid #eee;
+}
+
+.taxosfloating_left {
+  float: left;
+  width: 20%;
+  border-top: 1px solid #eee;
+}
+
 @media (max-width: 900px) {
     body {
         padding: 15px;
