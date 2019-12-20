@@ -19,6 +19,7 @@ For more explanation about some features, scroll down to **Features**
 * **(+)** Name the taxonomies as you like
 * **(+)** Multiple taxonomies work flawless with single post
 * **(+)** New list of all taxonomies and tags below the post in single view
+* **(+)** New array front matter notaxonomy
 * Multilingual support for month names
 * Syntax highlighting
 * Custom CSS
@@ -125,10 +126,10 @@ about this feature in the section **Content type** below.
 ### Content type
 
 You can specify content type with field `type` in your content. For example
-static pages can be set as type `page` which are excluded from recent posts
-and all posts page. You can use site params `mainSections` and
-`disableDisqusTypes` to control which page types are excluded from recent
-posts and Disqus comments respectively.
+static pages can be set as type `page` which are excluded from recent posts,
+lists and they don't show there taxonomies below the page. You can use site
+params `mainSections` and `disableDisqusTypes` to control which page types
+are excluded from recent posts and Disqus comments respectively.
 
 ```md
 ---
@@ -140,7 +141,7 @@ type: "page"
 This is some static page where you can write about yourself.
 ```
 
-### Taxonomies and Tags
+### Taxonomies and tags
 
 Since the release of version 1.0.2 it is possible to name the keywords and 
 taxonomies freely and therefore be much more flexible. Especially if you use the
@@ -148,14 +149,39 @@ theme with a language other than English. Also, the different taxonomies will
 now be displayed below the post.
 
 Here is an example of different taxonomies in the config file:
-```
+```toml
 [taxonomies]
   tag = "tags"
   series = "series"
   author = "authors"
 ```
+
 If you use one or more of these taxonomies in your posts there will be displayed
 in a new list below the content of the post.
+
+#### Front matter "notaxonomy" for taxonomies
+
+Since release 1.0.2 Vitae shows every taxonomy a post is part of below the
+content. This could lead to a very unpleasantly large number of taxonomies
+under the post.
+
+With the new front matter `notaxanomy` you can specify every taxonomy that
+should **not be visible** below the content. You can also use the type page
+as explained  at **Content type** to disable the taxonomie view completely.
+
+```md
++++
+title = "spf13-vim 3.0 release and new website"
+date = "2012-04-06"
+description = "spf13-vim is a cross platform distribution of vim plugins and resources for Vim."
+tags = [".vimrc", "plugins", "spf13-vim", "vim"]
+series = ["learn vim","vim2.0"]
+authors = ["John Doe","Jane Doe"]
+notaxonomy = ["series","authors"]
++++
+```
+
+In the example above the post does only show the "tags" below the content.
 
 ## Credits
 
