@@ -21,6 +21,7 @@ For more explanation about some features, scroll down to **Features**
 * **(+)** New list of all taxonomies and tags below the post in single view
 * **(+)** New array front matter notaxonomy
 * **(+)** Author/Writer display in post with extra features
+* **(+)** New bool front matter nofeed
 * Multilingual support for month names
 * Syntax highlighting
 * Custom CSS
@@ -194,6 +195,16 @@ If you consider to give a link to the author, just use the new front matter
 website.
 
 All content that has no author set, will not use this feature obviously.
+
+### Front matter "nofeed" for RSS
+
+If you have pages, posts or other content that should not show up in the RSS
+feed of your website. You can set the new front matter `nofeed` for this
+content. It's a boolean, you could use either `true` or `false`.
+
+If you want to modify the `index.xml` layout. Copy the Vitae layout from
+`hugo-vitae/layouts/index.xml` to your Hugo site root directory into the
+folder `layouts/` and change it the way you want.
 
 ## Credits
 
