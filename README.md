@@ -1,14 +1,34 @@
 # Vitae
-... is a blog theme for Hugo that **focuses on your content** with some cool new **features**.  
+... is a blog theme for Hugo that **focuses on your content** with some cool new **features**.
 Forked from  [Hugo-Ink](https://github.com/knadh/hugo-ink).
 
 ## Demo
+
+On https://themes.gohugo.io you can look up a demo.
+[Link to demo](https://themes.gohugo.io/theme/hugo-vitae/)
+
 ![Screenshot](https://raw.githubusercontent.com/dataCobra/hugo-vitae/master/images/screenshot.png)
+
+## A redesign in 2020?
+
+Currently there are plans to completely redesign the look and feel of the
+interface, one reason is the growing number of new features. Also Vitae is
+supposed to stand out more from Hugo-Ink in the future.
+
+If you want to try out the redesign of the interface during the development
+process, you can simply use the created git branch.
+
+```sh
+cd themes
+git clone https://github.com/datacobra/hugo-vitae.git hugo-vitae
+git checkout -b redesign
+```
 
 ## Features
 
-All Features with a **(+)** infront of it are new with Vitae and form the foundation of the theme.
-For more explanation about some features, scroll down to **Features**
+All Features with a **(+)** infront of it are new with Vitae and form the
+foundation of the theme. For more explanation about some features, scroll down
+to **Features**
 
 * **(+)** Easy to use, even with GDPR in mind
 * **(+)** Optimized responsiveness for all kinds of devices
@@ -41,7 +61,7 @@ Decompress it into your `themes/` folder.
 
 ### Development
 
-change your current work directory into the root directory of your hugo site 
+change your current work directory into the root directory of your hugo site
 and clone the repository:
 
 ```sh
@@ -145,10 +165,10 @@ This is some static page where you can write about yourself.
 
 ### Taxonomies and tags
 
-Since the release of version 1.0.2 it is possible to name the keywords and 
-taxonomies freely and therefore be much more flexible. Especially if you use the
-theme with a language other than English. Also, the different taxonomies will
-now be displayed below the post.
+Since the release of version 1.0.2 it is possible to name the keywords and
+taxonomies freely and therefore be much more flexible. Especially if you use
+the theme with a language other than English. Also, the different taxonomies
+will now be displayed below the post.
 
 Here is an example of different taxonomies in the config file:
 ```toml
@@ -158,8 +178,8 @@ Here is an example of different taxonomies in the config file:
   author = "authors"
 ```
 
-If you use one or more of these taxonomies in your posts there will be displayed
-in a new list below the content of the post.
+If you use one or more of these taxonomies in your posts there will be
+displayed in a new list below the content of the post.
 
 #### Front matter "notaxonomy" for taxonomies
 
