@@ -50,18 +50,6 @@ html,button,input,select,textarea {
     color: #333;
 }
 
-::-moz-selection {
-    background: #3700ff;
-    text-shadow: none;
-    color: #fff;
-}
-
-::selection {
-    background: #3700ff;
-    text-shadow: none;
-    color: #fff;
-}
-
 hr {
     display: block;
     height: 1px;
