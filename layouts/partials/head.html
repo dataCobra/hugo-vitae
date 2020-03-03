@@ -6,7 +6,17 @@
 			</a>
 		</div>
 	{{ end }}
-	<h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+	{{if .IsHome}}
+		<h1 class="site-title">
+	{{ else }}
+		<h2 class="site-title">
+	{{ end }}
+		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+	{{if .IsHome}}
+		</h1>
+	{{ else }}
+	</h2>
+	{{ end }}
 	<div class="site-description">
 		{{- if isset .Site.Params "subtitle" -}}
 		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
