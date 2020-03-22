@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-{{ partial "header.html" . }}
+{{ partial "head.html" . }}
 
 <body>
 	<div class="container wrapper list">
-		{{ partial "head.html" . }}
+		{{ partial "header.html" . }}
 
 		{{ if isset .Data "Term" }}
 			<h2>{{ .Data.Term }}</h2>
