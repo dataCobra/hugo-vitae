@@ -217,6 +217,7 @@ ul {
 .header .site-title {
     margin: 0 0 10px 0;
     line-height: 0.2em;
+    font-size: 2.75rem;
 }
     .site-title a {
         color: #333;
