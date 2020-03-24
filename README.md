@@ -42,6 +42,7 @@ to **Features**
 * **(+)** New array front matter notaxonomy
 * **(+)** Author/Writer display in post with extra features
 * **(+)** New bool front matter nofeed
+* **(+)** KaTeX for math typesetting
 * Multilingual support for month names
 * Syntax highlighting
 * Custom CSS
@@ -76,13 +77,13 @@ For more information about installation read the
 
 ### GDPR in mind
 
-The GDPR has many rules for third-party assets, so if you don't want to think
-about GDPR complaints you can disable every third-party asset that is
+The GDPR has many rules for third party assets, so if you don't want to think
+about GDPR complaints you can disable every third party asset that is
 integrated.
 
-Some websites using webfonts from third-party sites like google. This theme
+Some websites using webfonts from third party sites like google. This theme
 brings FontAwesome and Roboto(-Slab) directly with it without having to
-integrate them via third-party sites.
+integrate them via third party sites.
 
 ### Setting the month names in another language
 
@@ -225,6 +226,21 @@ content. It's a boolean, you could use either `true` or `false`.
 If you want to modify the `index.xml` layout. Copy the Vitae layout from
 `hugo-vitae/layouts/index.xml` to your Hugo site root directory into the
 folder `layouts/` and change it the way you want.
+
+### KaTex for math typesetting
+
+Now you are able to use math typesetting. With this new feature, mathematical
+formulas can be setup easy and will displayed.
+
+The files that are necessary to accomplish that are delivered directly with
+the theme and don't need to be loaded from a third party.
+
+You can either add the "math" front matter with the value "yes" to the content
+you want to be able to show formulas or you can enable this feature global
+with the math param in your websites config file.
+
+An example can be found in the folder "exampleSite" or via the
+[demo](https://themes.gohugo.io/theme/hugo-vitae/).
 
 ## Credits
 
