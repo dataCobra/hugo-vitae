@@ -2,11 +2,11 @@
 <html>
 {{ partial "head.html" . }}
 <body>
-	<div class="container wrapper">
+	<div>
 		{{ partial "header.html" . }}
 
-		<div class="post">
-			<div class="author">
+		<div>
+			<div>
 				{{ if eq .Site.Params.listAuthor true}}
 					{{ if isset .Params "author" }}
 						{{ if isset .Params "authorlink" }}
@@ -17,23 +17,23 @@
 					{{ end }}
 				{{ end }}
 			</div>
-			<div class="post-header">
+			<div>
 				{{ if ne .Date.Year 1 }}
-					<div class="meta">
-						<div class="date">
-							<span class="day">{{ dateFormat "02" .Date }}</span>
-							<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
+					<div>
+						<div>
+							<span>{{ dateFormat "02" .Date }}</span>
+							<span>{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
 						</div>
 					</div>
 				{{ end }}
-				<div class="matter">
-					<h1 class="title">{{ .Title }}</h1>
+				<div>
+					<h1>{{ .Title }}</h1>
 				</div>
 			</div>
-			<div class="markdown">
+			<div>
 				{{ .Content }}
 			</div>
-			<div class="tags">
+			<div>
 				{{ if ne .Type "page" }}
 				{{ $pagename := .Page.Title }}
 				{{ $notaxo := .Params.notaxonomy }}
@@ -42,10 +42,10 @@
 					{{ with ($.Site.GetPage (printf "/%s" $taxonomyname)) }}
 					{{ if in $notaxo $taxonomyname }}
 					{{ else }}
-						<div class="taxosfloating_left">
+						<div>
 							<p>{{ $taxonomyname | humanize }}</p>
 						</div>
-						<div class="termsfloating_right">
+						<div>
 							<p>
 								{{ range $key, $value := $taxonomy }}
 									{{ range $value.Pages }}
@@ -56,7 +56,7 @@
 								{{ end }}
 							</p>
 						</div>
-						<div class="clearit"></div>
+						<div></div>
 					{{ end }}
 					{{ end }}
 					{{ end }}

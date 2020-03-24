@@ -1,15 +1,15 @@
-<div class="header">
+<div>
 	{{ if .Site.Params.Avatar }}
-		<div class="avatar">
+		<div>
 			<a href="{{ .Site.BaseURL }}">
 				<img src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Title }}" />
 			</a>
 		</div>
 	{{ end }}
 	{{if .IsHome}}
-		<h1 class="site-title">
+		<h1>
 	{{ else }}
-		<h2 class="site-title">
+		<h2>
 	{{ end }}
 		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 	{{if .IsHome}}
@@ -17,21 +17,21 @@
 	{{ else }}
 	</h2>
 	{{ end }}
-	<div class="site-description">
+	<div>
 		{{- if isset .Site.Params "subtitle" -}}
 		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
 		{{- end -}}
-		<nav class="nav social">
-			<ul class="flat">
+		<nav>
+			<ul>
 				{{- range $index, $key := .Site.Params.Social -}}
-					<li class="li-social"><a href="{{ $key.url }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
+					<li><a href="{{ $key.url }}"><i title="{{ $key.name }}" class="{{ $key.icon }}"></i></a></li>
 				{{- end -}}
 			</ul>
 		</nav>
 	</div>
 
-	<nav class="nav">
-		<ul class="flat">
+	<nav>
+		<ul>
 			{{ range .Site.Menus.main }}
 			<li>
 				<a href="{{ .URL }}">{{ .Name }}</a>
