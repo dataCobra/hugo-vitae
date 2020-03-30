@@ -468,7 +468,7 @@ ul {
     }
 
     .container {
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     .header .nav.social li {
@@ -483,6 +483,18 @@ ul {
         display: none;
     }
 
+    .header .site-title {
+      line-height: 1em;
+    }
+
+    .header .site-description {
+      flex-direction: column;
+    }
+
+    .header p {
+      margin: 5px 0 5px 0;
+    }
+
     blockquote {
         margin-left: 1rem;
         font-size: 1rem;
@@ -491,6 +503,6 @@ ul {
     }
 
     .icons {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
