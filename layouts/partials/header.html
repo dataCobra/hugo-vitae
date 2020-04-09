@@ -1,42 +1,39 @@
-<div>
-	{{ if .Site.Params.Avatar }}
-		<div>
-			<a href="{{ .Site.BaseURL }}">
-				<img src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Title }}" />
-			</a>
-		</div>
-	{{ end }}
-	{{if .IsHome}}
-		<h1>
-	{{ else }}
-		<h2>
-	{{ end }}
-		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-	{{if .IsHome}}
-		</h1>
-	{{ else }}
-	</h2>
-	{{ end }}
-	<div>
-		{{- if isset .Site.Params "subtitle" -}}
-		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
-		{{- end -}}
-		<nav>
-			<ul>
-				{{- range $index, $key := .Site.Params.Social -}}
-					<li><a href="{{ $key.url }}"><i title="{{ $key.name }}" class="{{ $key.icon }}"></i></a></li>
-				{{- end -}}
-			</ul>
-		</nav>
-	</div>
-
-	<nav>
-		<ul>
-			{{ range .Site.Menus.main }}
-			<li>
-				<a href="{{ .URL }}">{{ .Name }}</a>
-			</li>
-			{{ end }}
-		</ul>
-	</nav>
-</div>
+{{- if .Site.Params.Avatar -}}
+<header id="withavatar">
+  <div id="avatar">
+    <a href="{{ .Site.BaseURL }}">
+      <img src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Title }}">
+    </a>
+  </div>
+{{- else -}}
+<header id="withoutavatar">
+{{- end -}}
+  <div id="titletext">
+    {{- if .IsHome -}}
+    <h1 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+    {{- else -}}
+    <h2 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+    {{- end -}}
+    {{- if isset .Site.Params "subtitle" -}}
+    <p id="subtitle">{{ .Site.Params.Subtitle | markdownify }}</p>
+    {{- end -}}
+  </div>
+  <div id=social>
+    <nav>
+      <ul>
+        {{- range $index, $key := .Site.Params.Social -}}
+        <li><a href="{{ $key.url }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
+        {{- end -}}
+      </ul>
+    </nav>
+  </div>
+  <div id="mainmenu">
+    <nav>
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

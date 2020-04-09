@@ -1,40 +1,50 @@
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-	{{- $title := ( .Title ) -}}
-	{{- $siteTitle := ( .Site.Title ) -}}
-
-	{{- if .IsHome -}}
-		<title>{{ $siteTitle }} {{ if isset .Site.Params "subtitle" }}- {{ .Site.Params.Subtitle }}{{ end }} </title>
-	{{- else -}}
-		<title>{{ $title }} - {{ $siteTitle }}</title>
-	{{- end -}}
-
-	{{- if isset .Site.Params "favicon" -}}
-		<link rel="icon" type="image/png" href={{ .Site.Params.favicon }} />
-	{{- end -}}
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	{{ with .OutputFormats.Get "rss" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-	{{ end -}}
-
-	{{- template "_internal/opengraph.html" . -}}
-	{{- template "_internal/twitter_cards.html" . -}}
-
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/all.css" />
-
-	{{- if or .Params.math .Site.Params.math }}
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/katex.min.css" crossorigin="anonymous">
-	<script defer src="{{ .Site.BaseURL }}js/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-	<script defer src="{{ .Site.BaseURL }}js/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-	{{ end }}
-
-	{{- if isset .Site.Params "customcss" }}
-		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customCSS }}" />
-	{{ end }}
+<!-- Show which Hugo version was used -->
+  {{ hugo.Generator }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- If a author is set for the page it will be used -->
+  {{- with $.Param "author" -}}
+  <meta name="author" content="{{ . }}">
+  {{- end -}}
+<!-- Home will use keywords from config and page will use tags front matter as keywords -->
+  {{- if or .Params.tags $.Site.Params.keywords -}}
+  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "," }}{{ else }}{{ delimit $.Site.Params.keywords "," }}{{ end }}">
+  {{- end -}}
+<!-- Description is either out of the config or in front matter of a page -->
+  {{- if or .Description $.Site.Params.description -}}
+  <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+  {{- end -}}
+  {{- template "_internal/opengraph.html" . -}}
+  {{- template "_internal/twitter_cards.html" . -}}
+<!-- If favicon is true in config use the favicon files-->
+  {{- if eq .Site.Params.favicon true -}}
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  {{- end -}}
+<!-- Add rss+xml functionality -->
+  {{- with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{- end -}}
+<!-- Add all css files that are necessary -->
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/all.css" />
+<!-- Add math typesetting with KaTeX if math is set -->
+  {{- if or .Params.math .Site.Params.math -}}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/katex.min.css" crossorigin="anonymous">
+  <script defer src="{{ .Site.BaseURL }}js/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+  <script defer src="{{ .Site.BaseURL }}js/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  {{- end -}}
+<!-- Use customcss if you like -->
+  {{- if isset .Site.Params "customcss" -}}
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/{{ .Site.Params.customCSS }}" />
+  {{- end -}}
+<!-- Use a SEO friendly title tag-->
+  {{- if .IsHome -}}
+  <title>{{ .Site.Title }}{{ if isset .Site.Params "pagetitle" }} - {{ .Site.Params.Pagetitle }}{{ end }} </title>
+  {{- else -}}
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{- end -}}
 </head>

@@ -1,7 +1,5 @@
-<div>
-	<nav>
-		<div>{{ with .Site.Copyright }} {{ . | markdownify }} {{ end }}</div>
-	</nav>
-</div>
+<footer>
+{{ with .Site.Copyright }} {{ . | markdownify }} {{ end }}
 
 {{ template "_internal/google_analytics_async.html" . }}
+</footer>

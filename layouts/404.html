@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-{{ partial "head.html" . }}
-<body>
-	<div>
-		{{ partial "header.html" . }}
-		<div>
-			<h2>HTTP-404 Error</h2>
-			<p>
-			There is not content here.
-			</p>
-		</div>
-	{{ partial "footer.html" . }}
-</body>
-</html>
+{{ define "main" -}}
+<h2 class="page-title">{{ i18n "404title" }}</h2>
+<p>
+{{ i18n "404text" }}
+</p>
+{{ end }}

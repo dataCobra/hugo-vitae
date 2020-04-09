@@ -13,7 +13,13 @@
     {{ with .OutputFormats.Get "RSS" }}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ range .Site.RegularPages }}
+    {{ $pages := .Site.RegularPages }}
+    {{ if .Site.Params.feedSections }}
+    {{ $pages = where .Site.RegularPages "Section" "in" .Site.Params.feedSections }}
+    {{ else }}
+    {{ $pages = where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+    {{ end }}
+    {{ range $pages }}
       {{- if ne .Params.nofeed true -}}
         <item>
           <title>{{ .Title }}</title>
@@ -27,3 +33,4 @@
     {{ end }}
   </channel>
 </rss>
+
