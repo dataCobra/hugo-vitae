@@ -30,13 +30,13 @@ disqusShortname = ""
 	description = "Vitae is a blog theme for Hugo that focuses on your content."
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "This is my homepage."
+	pagetitle = "All about static site generation"
 
 	# Add a subtitle to your website
 	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
 
 	# Activate to show authors on pages if available
-	listAuthor = true
+	#listAuthor = true
 
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
@@ -45,7 +45,7 @@ disqusShortname = ""
 	avatar = "/img/vitae.jpg"
 
 	# Optional favicons for website
-	favicon = true
+	#favicon = true
 
 	# Add list of sections that should show up on the homepage
 	mainSections = ["post"]
@@ -54,7 +54,7 @@ disqusShortname = ""
 	feedSections = ["post"]
 
 	# Deactivate Taxonomies for specific page types
-	disableTaxoTypes = [""]
+	#disableTaxoTypes = [""]
 
 	# Content types to disable Disqus on.
 	disableDisqusTypes = ["page"]
