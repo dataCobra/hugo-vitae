@@ -1,23 +1,22 @@
-{{- if .Site.Params.Avatar -}}
-<header id="withavatar">
+<header>
+{{ if .Site.Params.Avatar }}
   <div id="avatar">
     <a href="{{ .Site.BaseURL }}">
       <img src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Title }}">
     </a>
   </div>
-{{- else -}}
-<header id="withoutavatar">
-{{- end -}}
+{{ end }}
   <div id="titletext">
     {{- if .IsHome -}}
     <h1 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
     {{- else -}}
     <h2 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
     {{- end -}}
+  </div>
+  <div id="title-description">
     {{- if isset .Site.Params "subtitle" -}}
     <p id="subtitle">{{ .Site.Params.Subtitle | markdownify }}</p>
     {{- end -}}
-  </div>
   <div id=social>
     <nav>
       <ul>
@@ -26,6 +25,7 @@
         {{- end -}}
       </ul>
     </nav>
+  </div>
   </div>
   <div id="mainmenu">
     <nav>
