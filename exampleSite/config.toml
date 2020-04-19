@@ -1,8 +1,11 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
+defaultContentLanguage = "en"
+author = "Hugo Authors"
 title = "Vitae"
 theme = "hugo-vitae"
 paginate = 5
+enableRobotsTXT = true
 
 copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
 
@@ -10,23 +13,54 @@ pygmentsstyle = "colorful"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-googleAnalytics = "UA-123-45"
-disqusShortname = "hugo-vitae"
+googleAnalytics = ""
+disqusShortname = ""
 
 [taxonomies]
 	tag = "tags"
+	category = "categories"
 	series = "series"
 
 [params]
+
+	# Add meta keywords in head part (Site Keywords or Tags of Page)
+	keywords = ["hugo","vitae","theme","static"]
+
+	# Add meta description in head part
+	description = "Vitae is a blog theme for Hugo that focuses on your content."
+
+	# Add pagetitle to homepage <title> tag
+	pagetitle = "This is my homepage."
+
+	# Add a subtitle to your website
 	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
+
+	# Activate to show authors on pages if available
+	listAuthor = true
+
+	# Add math typesetting with KaTeX (Global with this Param)
+	math = true
 
 	# Optional 80x80 avatar image.
 	avatar = "/img/vitae.jpg"
 
+	# Optional favicons for website
+	favicon = true
+
+	# Add list of sections that should show up on the homepage
+	mainSections = ["post"]
+
+	# Add list of Sections that should be considered by RSS
+	feedSections = ["post"]
+
+	# Deactivate Taxonomies for specific page types
+	disableTaxoTypes = [""]
+
 	# Content types to disable Disqus on.
 	disableDisqusTypes = ["page"]
 
-	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
+	# Custom CSS applied to default styles.
+	customCSS = "css/custom.css"
 
 # Nav.
 [[menu.main]]
@@ -35,8 +69,8 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
-url = "/posts"
+name = "All Posts"
+url = "/post"
 weight = 2
 
 [[menu.main]]
@@ -48,6 +82,11 @@ weight = 3
 name = "Tags"
 url = "/tags"
 weight = 4
+
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 5
 
 [[params.social]]
 name = "Github"
