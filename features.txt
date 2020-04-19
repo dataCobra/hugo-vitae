@@ -23,3 +23,4 @@
 .Params.type # https://gohugo.io/content-management/types/
 .Params.disqus # Disable disqus for this specific page
 .Params.hidden # Hide pages from the mainSections on the Homepage
+.Params.norobots # Disallow page in robots.txt for search engines
