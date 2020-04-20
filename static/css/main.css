@@ -174,6 +174,42 @@ ul {
   list-style: disc inside;
 }
 
+table {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  width: 100%;
+}
+
+table th,
+table td {
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+table thead th {
+  border-bottom: 2px solid #dee2e6;
+  vertical-align: bottom;
+}
+
+table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #808080;
+  color: #fff;
+}
+
+table th {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+}
+
 #avatar {
   float: left;
   margin-right: 20px;
@@ -458,6 +494,14 @@ legend, td, th {
     font-size: 1rem;
     border-left: 2px solid #3700FF;
     padding-left: 20px;
+  }
+
+  table {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    overflow-x: auto;
+    width: 100%;
   }
 
   #avatar {
