@@ -10,7 +10,7 @@
 .Site.Params.disableDisqusTypes # Deactivate Disqus for specific page types
 .Site.Params.excludedTypes # Exclude specific types in lists
 .Site.Params.mainSections # Add list of sections that should show up on the homepage
-.Site.Params.feedSections # Add list of sections that should be considered by RSS
+.Site.Params.nofeedSections # Add list of sections/types that should not be considered by RSS
 .Site.Params.disableTaxoTypes # Deactivate taxonomies for specific page types
 .Site.Params.favicon # Activate favicons for the website
 
