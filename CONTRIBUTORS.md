@@ -7,3 +7,4 @@ collaboration of others.
 
 * [Benedikt Tuchen](https://github.com/dataCobra)
 * [Mark Petherbridge](https://github.com/markdevjapan)
+* [Christoph Petrausch](https://github.com/hikhvar)
