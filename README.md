@@ -156,6 +156,10 @@ Hide page from the mainSection of the homepage.
 
 Disallow page in robots.txt for search engines.
 
+**nodate(bool)**
+
+Hide the publish date of the page. Useful for about pages or pages required for legal reasons.
+
 ## Credits
 
 * [hugo-ink](https://github.com/knadh/hugo-ink) from which Vitae was forked
