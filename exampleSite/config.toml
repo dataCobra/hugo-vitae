@@ -59,8 +59,8 @@ disqusShortname = ""
 	# Content types to disable Disqus on.
 	disableDisqusTypes = ["page"]
 
-	# Custom CSS applied to default styles.
-	customCSS = "css/custom.css"
+	# Custom CSS applied to default styles. (Path is static/css/)
+	customCSS = "custom.css"
 
 # Nav.
 [[menu.main]]
