@@ -467,6 +467,14 @@ legend, td, th {
   padding: 0;
 }
 
+.gist table tbody tr:nth-of-type(even) {
+  background-color: unset;
+}
+
+.gist table th, table td {
+  border-bottom: unset;
+}
+
 @media screen and (max-width: 800px) {
   body {
     margin: 0 auto;
