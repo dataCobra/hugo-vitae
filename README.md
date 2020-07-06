@@ -158,7 +158,19 @@ Disallow page in robots.txt for search engines.
 
 **nodate(bool)**
 
-Hide the publish date of the page. Useful for about pages or pages required for legal reasons.
+Hide the publish date of the page. Useful for about pages or pages required for
+legal reasons.
+
+**image(string)**
+
+Add an image with /path/to/img to your post. If the path of the image in the
+hugo site directoy is /static/img/picture.jpg, the correct path for the front
+matter is /img/picture.jpg.
+
+**imagetext(string)**
+
+This is the alternate text for the image that could be added via image front
+matter.
 
 ## Credits
 

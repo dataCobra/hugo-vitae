@@ -1,5 +1,10 @@
 {{ define "main" -}}
 <div class="post">
+{{ if isset .Params "image" }}
+<div class="post-image">
+<img src="{{ .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
+</div>
+{{ end }}
 <div class="author">
 {{ if eq .Site.Params.listAuthor true}}
 {{ if isset .Params "author" }}
