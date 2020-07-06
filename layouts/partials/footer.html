@@ -1,3 +1,4 @@
+{{ if .Site.Copyright }}
 <footer>
 {{ with .Site.Copyright }} {{ . | markdownify }} {{ end }}
 
@@ -5,3 +6,9 @@
     {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
 </footer>
+{{ else }}
+{{ if not .Site.IsServer }}
+    {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+{{ end }}
+
