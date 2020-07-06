@@ -27,6 +27,7 @@
     </nav>
   </div>
   </div>
+  {{ if isset .Site.Menus "main" }}
   <div id="mainmenu">
     <nav>
       <ul>
@@ -36,4 +37,5 @@
       </ul>
     </nav>
   </div>
+  {{ end }}
 </header>
