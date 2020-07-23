@@ -477,9 +477,9 @@ legend, td, th {
 
 p code {
   border-radius: 5px;
-  border-right: 4px solid #E1E1E1;
-  border-left: 4px solid #E1E1E1;
-  background: #E1E1E1;
+  border-right: 4px solid #F1F1F1;
+  border-left: 4px solid #F1F1F1;
+  background: #F1F1F1;
 }
 
 @media screen and (max-width: 800px) {
