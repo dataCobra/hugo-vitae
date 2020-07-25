@@ -14,7 +14,6 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 googleAnalytics = ""
-disqusShortname = ""
 
 [taxonomies]
 	tag = "tags"
@@ -56,13 +55,28 @@ disqusShortname = ""
 	# Deactivate Taxonomies for specific page types
 	#disableTaxoTypes = [""]
 
-	# Content types to disable Disqus on.
-	disableDisqusTypes = ["page"]
-
 	# Custom CSS applied to default styles. (Path is static/css/)
 	customCSS = "custom.css"
 
-# Nav.
+[params.comments]
+# Enable Comments with "true"
+enabled = false
+
+# Comment provider:
+#   disqus (https://disqus.com)
+#   commento (https://commento.io)
+#engine = "disqus"
+
+# Content types to disable comments on.
+#disableOnTypes = ["page"]
+
+[params.comments.disqus]
+#shortname = "" # Paste the shortname from your Disqus dashboard.
+
+[params.comments.commento]
+#host = "" # Paste the domain of you commento.io system
+
+# Navigation
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -88,6 +102,7 @@ name = "Categories"
 url = "/categories"
 weight = 5
 
+# Social Menu
 [[params.social]]
 name = "Github"
 icon = "fab fa-github"

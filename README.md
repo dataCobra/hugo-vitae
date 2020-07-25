@@ -144,9 +144,9 @@ Don't add page to RSS.
 
 Disable specific taxonomies for a page.
 
-**disqus(bool)**
+**commentable(bool)**
 
-Enable/Disable Disqus for this specific page.
+Enable/Disable comments for this specific page.
 
 **hidden(bool)**
 

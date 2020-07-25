@@ -5,11 +5,8 @@
 - id: nextpage
   translation: "Next page →"
 
-- id: javadisqus
-  translation: "Please enable JavaScript to view the"
-
-- id: commentsdisqus
-  translation: "comments powered by"
+- id: nojscomments
+  translation: "Please enable JavaScript to load the comments."
 
 - id: authorpretext
   translation: "Written by"
