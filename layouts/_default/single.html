@@ -31,7 +31,6 @@
 <div class="markdown">
 {{ .Content }}
 </div>
-<div class="tags">
 {{ if ne (in .Site.Params.disableTaxoTypes .Type) true }}
 {{ $pagename := .Page.Title }}
 {{ $notaxo := .Params.notaxonomy }}
@@ -40,6 +39,7 @@
 {{ with ($.Site.GetPage (printf "/%s" $taxonomyname)) }}
 {{ if in $notaxo $taxonomyname }}
 {{ else }}
+<div class="tags">
 <div class="taxosfloating_left">
 <p>{{ $taxonomyname | humanize }}</p>
 </div>
