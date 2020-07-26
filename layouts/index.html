@@ -1,5 +1,6 @@
 {{ define "main" -}}
 {{ if eq .Site.Params.homepage true }}
+{{ with .Site.GetPage "/homepage.md" }}
 <div class="post">
 {{ if isset .Params "image" }}
 <div class="post-image">
@@ -35,7 +36,7 @@
 </div>
 </div>
 <div class="markdown">
-{{ .Content | markdownify }}
+{{ .Content }}
 </div>
 <div class="tags">
 {{ if ne (in .Site.Params.disableTaxoTypes .Type) true }}
@@ -81,6 +82,7 @@
 {{- end -}}
 {{- end -}}
 </div>
+{{ end }}
 {{ else }}
 <div class="recent-posts">
 <div class="posts">
