@@ -21,6 +21,8 @@ googleAnalytics = ""
 	series = "series"
 
 [params]
+	# Use homepage.md instead of a list of posts
+	homepage = false
 
 	# Add meta keywords in head part (Site Keywords or Tags of Page)
 	keywords = ["hugo","vitae","theme","static"]
@@ -56,8 +58,9 @@ googleAnalytics = ""
 	#disableTaxoTypes = [""]
 
 	# Custom CSS applied to default styles. (Path is static/css/)
-	customCSS = "custom.css"
+	#customCSS = "custom.css"
 
+# Comments
 [params.comments]
 # Enable Comments with "true"
 enabled = false

@@ -1,3 +1,4 @@
+.Site.Params.homepage  # Enable/Disable homepage use instead of a list
 .Site.Params.keywords  # Add meta keywords in head part (Site Keywords or Tags of Page)
 .Site.Params.description # Add meta description in head part (Site Description or Description of Page)
 .Site.Params.math # Add math typesetting with KaTeX (Global with this param)

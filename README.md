@@ -1,12 +1,12 @@
 # Vitae
 ... is a blog theme for Hugo that **focuses on your content**.
 
-## Redesign
+## :mega: Version 2.1 now released
 
-The theme is now completely rewritten from scratch. In the future it will now
-be easier to make improvments to the theme.
+Finally Version 2.1 is released and available for everyone.
+This version is considered stable.
 
-If you notice anything, please write an issue.
+But if you encounter a bug or problem, consider writing an issue.
 
 ## Demo
 
@@ -28,9 +28,11 @@ For more explanation about various features, scroll down to **Features**
 * Multilingual support for month names and other fixed strings
 * Various front matter and configuration options for more flexible use.
 * RSS feed
-* Disqus comments (optional)
+* Comments with commento.io or disqus (optional)
 * Google Analytics integration (optional)
 * Twitter cards and Open Graph tags integration
+* Images for post headers
+* Use of a homepage instead of a list of posts
 * And some other cool features...
 
 ## Installation
@@ -158,8 +160,8 @@ Disallow page in robots.txt for search engines.
 
 **nodate(bool)**
 
-Hide the publish date of the page. Useful for about pages or pages required for
-legal reasons.
+Hide the publish date of the page. Useful for about pages or pages required
+for legal reasons.
 
 **image(string)**
 
@@ -174,7 +176,6 @@ matter.
 
 ## Credits
 
-* [hugo-ink](https://github.com/knadh/hugo-ink) from which Vitae was forked
 * [freepik](https://www.freepik.com) for the avatar
 * [google](https://fonts.google.com/specimen/Roboto) for the roboto fonts
 * [fontawesome](https://fontawesome.com) for providing amazing icons
