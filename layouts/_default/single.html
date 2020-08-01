@@ -48,7 +48,7 @@
 {{ range $key, $value := $taxonomy }}
 {{ range $value.Pages }}
 {{ if eq .LinkTitle $pagename }}
-<a href="/{{ $taxonomyname }}/{{ $key }}/"> {{ $key }} </a>
+<a href="{{ .Site.BaseURL }}{{ $taxonomyname }}/{{ $key }}/"> {{ $key }} </a>
 {{ end }}
 {{ end }}
 {{ end }}
