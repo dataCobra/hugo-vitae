@@ -1,9 +1,9 @@
 {{ define "main" -}}
 <h2 class="page-title">{{ .Name }}</h2>
 <div class="tag-cloud">
-{{ $data := .Data }}
-{{ range $key, $value := .Data.Terms.ByCount }}
-<a href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}/">{{ $value.Name }}<sup>{{ $value.Count }}</sup></a>
-{{ end }}
+	{{ $data := .Data }}
+	{{ range $key, $value := .Data.Terms.ByCount }}
+	<a href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}/">{{ $value.Name }}<sup>{{ $value.Count }}</sup></a>
+	{{ end }}
 </div>
 {{ end }}

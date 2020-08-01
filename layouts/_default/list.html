@@ -5,32 +5,32 @@
 <h2 class="page-title">{{ .Title }}</h2>
 {{ end }}
 <ul class="posts flat">
-{{- range .Data.Pages -}}
-{{- if (in .Site.Params.excludedTypes .Type) -}}
-{{- else -}}
-<li class="post">
-<div class="post-header">
-<div class="meta">
-<div class="date">
-<span class="day">{{ dateFormat "02" .Date }}</span>
-<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
-</div>
-</div>
-<div class="matter">
-<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
-<span class="description">
-{{ if isset .Params "description" }}
-{{ .Description }}
-{{ else if gt (len .Plain) 120 }}
-{{ slicestr .Plain 0 120 | htmlUnescape }}...
-{{ else }}
-{{ .Plain  | htmlUnescape }}
-{{ end }}
-</span>
-</div>
-</div>
-</li>
-{{- end -}}
-{{- end -}}
+	{{- range .Data.Pages -}}
+	{{- if (in .Site.Params.excludedTypes .Type) -}}
+	{{- else -}}
+	<li class="post">
+		<div class="post-header">
+			<div class="meta">
+				<div class="date">
+					<span class="day">{{ dateFormat "02" .Date }}</span>
+					<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
+				</div>
+			</div>
+			<div class="matter">
+				<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
+				<span class="description">
+					{{ if isset .Params "description" }}
+					{{ .Description }}
+					{{ else if gt (len .Plain) 120 }}
+					{{ slicestr .Plain 0 120 | htmlUnescape }}...
+					{{ else }}
+					{{ .Plain  | htmlUnescape }}
+					{{ end }}
+				</span>
+			</div>
+		</div>
+	</li>
+	{{- end -}}
+	{{- end -}}
 </ul>
 {{ end }}
