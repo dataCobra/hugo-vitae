@@ -4,7 +4,7 @@
 <div class="post">
 	{{ if isset .Params "image" }}
 	<div class="post-image">
-			<img src="{{ .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
+			<img src="{{ relURL .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
 	</div>
 	{{ end }}
 	<div class="author">
@@ -12,7 +12,7 @@
 		{{ if isset .Params "author" }}
 		<p>
 		{{ if isset .Params "authorlink" }}
-		{{ i18n "authorpretext" }} <a href="{{ .Params.authorlink }}">{{ .Params.author }}</a>
+		{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}">{{ .Params.author }}</a>
 		{{ else }}
 		{{ i18n "authorpretext" }} {{ .Params.author }}
 		{{ end }}
