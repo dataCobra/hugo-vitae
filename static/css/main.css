@@ -24,9 +24,18 @@
 
 @font-face {
   font-family: 'Roboto Slab Regular';
+  font-display: auto;
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Slab Regular'), url('../webfonts/RobotoSlab-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), url('../webfonts/RobotoMono-Regular.woff') format('woff');
 }
 
 body {
@@ -440,6 +449,7 @@ ul.flat li {
 }
 
 code, kbd, pre, samp {
+  font-family: "Roboto Mono", monospace;
   font-size: 0.95em;
 }
 
