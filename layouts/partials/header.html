@@ -2,7 +2,7 @@
 	{{ if .Site.Params.Avatar }}
 	<div id="avatar">
 		<a href="{{ .Site.BaseURL }}">
-			<img src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Title }}">
+		  <img src="{{ relURL .Site.Params.Avatar }}" alt="{{ .Site.Title }}">
 		</a>
 	</div>
 	{{ end }}
@@ -17,11 +17,11 @@
 		{{- if isset .Site.Params "subtitle" -}}
 		<p id="subtitle">{{ .Site.Params.Subtitle | markdownify }}</p>
 		{{- end -}}
-		<div id=social>
+		<div id="social">
 			<nav>
 				<ul>
 					{{- range $index, $key := .Site.Params.Social -}}
-					<li><a href="{{ $key.url }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
+					<li><a href="{{ relURL $key.url }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
 					{{- end -}}
 				</ul>
 			</nav>

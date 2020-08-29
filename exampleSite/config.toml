@@ -57,8 +57,8 @@ googleAnalytics = ""
 	# Deactivate Taxonomies for specific page types
 	#disableTaxoTypes = [""]
 
-	# Custom CSS applied to default styles. (Path is static/css/)
-	#customCSS = "custom.css"
+	# Custom CSS applied to default styles. (Path could be "static/css/")
+	#customCSS = "css/custom.css"
 
 # Comments
 [params.comments]
