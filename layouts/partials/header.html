@@ -17,7 +17,7 @@
 		{{- if isset .Site.Params "subtitle" -}}
 		<p id="subtitle">{{ .Site.Params.Subtitle | markdownify }}</p>
 		{{- end -}}
-		<div id=social>
+		<div id="social">
 			<nav>
 				<ul>
 					{{- range $index, $key := .Site.Params.Social -}}
