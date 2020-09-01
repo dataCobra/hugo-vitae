@@ -111,6 +111,11 @@ name = "Github"
 icon = "fab fa-github"
 url = "https://github.com/dataCobra/hugo-vitae"
 
+#[[params.social]]
+#name = "Email"
+#icon = "fas fa-envelope"
+#cmd = "mailto:example@example.com"
+
 [[params.social]]
 name = "RSS"
 icon = "fas fa-rss"
