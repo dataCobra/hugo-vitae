@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--Showing Thumbnail Title Article / Post-->
+	<meta property="og:title" content="{{ .Title }}">
+	<!--Showing Thumbnail Image Article / Post-->
+	{{ if isset .Params "image" }}
+	<meta propert="og:image" content="{{ relURL .Params.image }}">
+	{{ end }}
 	<!-- If a author is set for the page it will be used -->
 	{{- with $.Param "author" -}}
 	<meta name="author" content="{{ . }}">

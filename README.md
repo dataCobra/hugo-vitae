@@ -33,6 +33,7 @@ For more explanation about various features, scroll down to **Features**
 * Twitter cards and Open Graph tags integration
 * Images for post headers
 * Use of a homepage instead of a list of posts
+* Thumbnail Article or Post
 * And some other cool features...
 
 ## Installation
