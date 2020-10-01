@@ -8,7 +8,7 @@
 	<meta property="og:title" content="{{ .Title }}">
 	<!--Showing Thumbnail Image Article / Post-->
 	{{ if isset .Params "image" }}
-	<meta propert="og:image" content="{{ relURL .Params.image }}">
+	<meta property="og:image" content="{{ relURL .Params.image }}">
 	{{ end }}
 	<!-- If a author is set for the page it will be used -->
 	{{- with $.Param "author" -}}
