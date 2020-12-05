@@ -406,6 +406,8 @@ table th {
 
 .tag-cloud {
     margin-top: 20px;
+    line-height: normal;
+    text-align: center;
 }
 
 .tag-cloud a {
