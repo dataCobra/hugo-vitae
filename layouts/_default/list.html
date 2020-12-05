@@ -1,8 +1,8 @@
 {{ define "main" -}}
 {{ if isset .Data "Term" }}
-<h2 class="page-title">{{ humanize .Data.Term }}</h2>
+<h1 class="page-title">{{ humanize .Data.Term }}</h1>
 {{ else }}
-<h2 class="page-title">{{ .Title }}</h2>
+<h1 class="page-title">{{ .Title }}</h1>
 {{ end }}
 {{.Content}}
 <ul class="posts flat">

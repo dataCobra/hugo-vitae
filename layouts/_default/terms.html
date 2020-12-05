@@ -1,5 +1,5 @@
 {{ define "main" -}}
-<h2 class="page-title">{{ .Name }}</h2>
+<h1 class="page-title">{{ .Name }}</h1>
 <div class="tag-cloud">
 	{{ $max := len (index $.Site.Taxonomies.tags.ByCount 0).Pages }}
 	{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
