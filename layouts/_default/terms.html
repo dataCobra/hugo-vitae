@@ -4,7 +4,7 @@
 	{{ $max := len (index $.Site.Taxonomies.tags.ByCount 0).Pages }}
 	{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
 
-	{{ if ne $max $min }}
+	{{ if eq $max $min }}
 	{{ $maxFontSize := 2.5 }}
 	{{ $minFontSize := 1.0 }}
 	{{ $steps := div (sub $maxFontSize $minFontSize) (sub $max $min) }}
