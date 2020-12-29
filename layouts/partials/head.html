@@ -33,9 +33,12 @@
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{- end -}}
 	<!-- Add all css files that are necessary -->
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" />
+	{{ $normalizeCSS := resources.Get "css/normalize.css" | resources.Minify | resources.Fingerprint "sha512" }}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ $normalizeCSS.Permalink | relURL }}" integrity="{{ $normalizeCSS.Data.Integrity }}" />
+	{{ $mainCSS := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint "sha512" }}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ $mainCSS.Permalink | relURL }}" integrity="{{ $mainCSS.Data.Integrity }}" />
+	{{ $fontawesomeCSS := resources.Get "css/all.css" | resources.Minify | resources.Fingerprint "sha512" }}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ $fontawesomeCSS.Permalink | relURL }}" integrity="{{ $fontawesomeCSS.Data.Integrity }}" />
 	<!-- Add math typesetting with KaTeX if math is set -->
 	{{- if or .Params.math .Site.Params.math -}}
 	<link rel="stylesheet" href="{{ relURL "/css/katex.min.css" }}" crossorigin="anonymous">

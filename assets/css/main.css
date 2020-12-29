@@ -38,11 +38,67 @@
   src: local('Roboto Mono'), url('../webfonts/RobotoMono-Regular.woff') format('woff');
 }
 
+:root {
+  --color-background: #FFF;
+  --color-background-dark: #808080;
+  --color-background-darker: #333;
+  --color-background-light: #F1F1F1;
+  --color-background-lighter: #FAFAFA;
+
+  --color-border-primary: #ccc;
+  --color-border-secondary: #dee2e6;
+  --color-border-accent: #E00;
+  --color-border-dark: #333;
+  --color-border-light: #eee;
+  --color-border-lighter: #FFFFFF;
+
+  --color-text-primary: #333;
+  --color-text-secondary: #999;
+  --color-text-accent: #E00;
+  --color-text-lighter: #FFF;
+
+  --color-link-primary: #00E;
+  --color-link-primary-hover: #808080;
+  --color-link-secondary: #555;
+  --color-link-secondary-hover: #00E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1F1F1F;
+    --color-background-dark: #F1F1F1;
+    --color-background-darker: #FAFAFA;
+    --color-background-light: #808080;
+    --color-background-lighter: #333;
+
+    --color-border-primary: #ccc;
+    --color-border-secondary: #dee2e6;
+    --color-border-accent: #E00;
+    --color-border-dark: #eee;
+    --color-border-light: #333;
+    --color-border-lighter: #272727;
+
+    --color-text-primary: #f2f2f2;
+    --color-text-secondary: #c8c8c8;
+    --color-text-accent: #E00;
+    --color-text-lighter: #000;
+
+    --color-link-primary: #58a6ff;
+    --color-link-primary-hover: #AFAFAF;
+    --color-link-secondary: #808080;
+    --color-link-secondary-hover: #a0c4f2;
+  }
+}
+
+html {
+  background-color: var(--color-background);
+}
+
 body {
   font-family: "Roboto Regular", serif;
   font-weight: 400;
   font-size: 18px;
-  color: #333;
+  color: var(--color-text-primary);
   line-height: 1.6rem;
   max-width: 800px;
   margin: 20px auto 0 auto;
@@ -66,22 +122,22 @@ footer {
   font-family: "Roboto Slab Regular", serif;
   text-align: right;
   font-size: 0.75em;
-  color: #999;
-  border-top: 1px solid #eee;
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border-light);
   margin-top: 10px;
   padding: 5px 0;
 }
 
 footer a {
-  color: #555;
+  color: var(--color-link-secondary);
 }
 
 footer a:hover {
-  color: #00E
+  color: var(--color-link-secondary-hover);
 }
 
-html,button,input,select,textarea {
-  color: #333;
+html, button, input, select, textarea {
+  color: var(--color-text-primary);
 }
 
 b, strong {
@@ -89,19 +145,20 @@ b, strong {
 }
 
 a {
-  color: #00E;
+  color: var(--color-link-primary);
   text-decoration: none;
   word-break: break-word;
 }
+
 a:hover {
-  color: #808080;
+  color: var(--color-link-primary-hover);
 }
 
 hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--color-border-primary);
     margin: 1rem 0;
     padding: 0;
 }
@@ -113,7 +170,7 @@ img {
 }
 
 a img {
-  border:none;
+  border: none;
 }
 
 figure {
@@ -133,7 +190,7 @@ textarea {
 
 blockquote {
   margin-left: 1rem;
-  border-left: 2px solid #E00;
+  border-left: 2px solid var(--color-border-accent);
   padding-left: 20px;
 }
 
@@ -147,7 +204,7 @@ blockquote em {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #333;
+    color: var(--color-text-primary);
     font-weight: 500;
     line-height: 1.3em;
     margin: 30px 0 20px 0;
@@ -162,7 +219,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 h4 {
@@ -186,6 +243,8 @@ table {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
   background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
   margin-bottom: 1rem;
   overflow-x: auto;
   width: 100%;
@@ -193,29 +252,29 @@ table {
 
 table th,
 table td {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--color-border-secondary);
   padding: 0.75rem;
   vertical-align: top;
 }
 
 table thead th {
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid var(--color-border-secondary);
   vertical-align: bottom;
 }
 
 table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid var(--color-border-secondary);
 }
 
 table tbody tr:nth-of-type(even) {
-  background-color: #808080;
-  color: #fff;
+  background-color: var(--color-background-dark);
+  color: var(--color-text-lighter);
 }
 
 table th {
-  background-color: #333;
-  border-color: #333;
-  color: #fff;
+  background-color: var(--color-background-darker);
+  border-color: var(--color-border-dark);
+  color: var(--color-text-lighter);
 }
 
 #avatar {
@@ -235,16 +294,16 @@ table th {
 }
 
 #title a {
-  color: #333;
+  color: var(--color-text-primary);
 }
 
 #title a:hover {
-  color: #808080;
+  color: var(--color-link-primary-hover);
 }
 
 #title-description {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 #social nav {
@@ -267,8 +326,8 @@ table th {
 }
 
 #mainmenu nav {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
   padding: 5px 0 5px 0;
 }
 
@@ -283,12 +342,12 @@ table th {
 }
 
 .icons {
-  color: #333;
+  color: var(--color-text-primary);
   font-size: 1.4rem;
 }
 
 .icons:hover {
-  color: #808080;
+  color: var(--color-link-primary-hover);
 }
 
 .recent-posts .posts .post {
@@ -322,13 +381,13 @@ table th {
 }
 
 .post-header h1.title {
-    margin: -10px 0 0 0;
+    margin: 0 0 8px;
     font-family: "Roboto Slab Regular", serif;
     font-weight: bold;
 }
 
 .post .title.small {
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
     font-family: "Roboto Slab Regular", serif;
 }
 
@@ -336,8 +395,19 @@ table th {
     margin-bottom: 30px;
 }
 
+.post .post-header .author {
+  font-family: "Roboto Slab Regular", serif;
+  font-size: 0.85em;
+  margin-bottom: 4px;
+}
+
+.post .post-header .description {
+  font-family: "Roboto Slab Regular", serif;
+  font-size: 0.7em;
+}
+
 .post .draft-label {
-    color: #E00;
+    color: var(--color-text-accent);
     text-decoration: underline;
     padding: 2px 4px;
     margin-left: 6px;
@@ -348,7 +418,7 @@ table th {
     display: inline-block;
     border: 1px solid;
     border-radius: 3px;
-    padding: 0px 6px;
+    padding: 0 6px;
     line-height: 20px;
     font-size: 0.85em;
     text-decoration: none;
@@ -356,7 +426,7 @@ table th {
 }
 
 .post .tags a:hover {
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--color-border-lighter);
 }
 
 .post ul li {
@@ -416,7 +486,7 @@ table th {
 }
 
 .author {
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   margin-bottom: 10px;
 }
 
@@ -462,16 +532,11 @@ code, kbd, pre, samp {
 
 .highlight {
   background: 0 0;
-  background-color: #FAFAFA;
+  background-color: var(--color-background-lighter);
 }
 
 pre, textarea {
   overflow: auto;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 legend, td, th {
@@ -488,8 +553,8 @@ legend, td, th {
 
 p code {
   border-radius: 5px;
-  background: #F1F1F1;
-  padding: 0px 4px;
+  background: var(--color-background-light);
+  padding: 0 4px;
 }
 
 @media screen and (max-width: 800px) {
@@ -507,25 +572,15 @@ p code {
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   h4 {
     font-size: 1rem;
   }
 
-  blockquote {
-    margin-left: 1rem;
-    border-left: 2px solid #E00;
-    padding-left: 20px;
-  }
-
   table {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-overflow-scrolling: touch;
     display: block;
-    overflow-x: auto;
-    width: 100%;
   }
 
   #avatar {
@@ -542,6 +597,7 @@ p code {
 
   #title-description {
     flex-direction: column;
+    align-items: flex-end;
   }
 
   #subtitle {
@@ -553,22 +609,63 @@ p code {
   }
 
   #social nav li {
-    list-style: none;
-    margin: 0 10px 0 0;
     padding: 2px;
   }
 
-  #social li:last-child {
-    margin: 0;
-  }
-
   #mainmenu nav li {
-    display: inline-block;
-    list-style: none;
     margin: 0 10px 0 0;
   }
 
+  #mainmenu nav li a {
+    padding: 12px;
+  }
+
   .icons {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .pagination a {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #title {
+    margin: 0 0 -5px 0;
+    font-size: 2.25rem;
+  }
+
+  .recent-posts .posts .post {
+    margin-bottom: 30px;
+  }
+
+  .post .post-header {
+    flex-direction: column;
+  }
+
+  .post .post-header .meta .date {
+    text-align: left;
+    width: auto;
+    margin-bottom: 8px;
+  }
+
+  .post .post-header .meta .date span {
+    display: inline;
+    font-weight: 700;
+  }
+
+  .post .post-header .meta .date .day {
+    font-size: .85em;
+    margin-top: 0;
+    margin-bottom: 10;
+  }
+
+  .post .post-header .description {
+    display: none;
+  }
+
+  .pagination .page-prev {
+    margin-right: 10px;
+    padding-right: 10px;
   }
 }
