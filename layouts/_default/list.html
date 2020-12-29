@@ -19,6 +19,17 @@
 			</div>
 			<div class="matter">
 				<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
+				<div class="author">
+				{{ if eq .Site.Params.listAuthor true }}
+					{{ if isset .Params "author" }}
+						{{ if isset .Params "authorlink" }}
+							{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}">{{ .Params.author }}</a>
+						{{ else }}
+							{{ i18n "authorpretext" }} {{ .Params.author }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
+				</div>
 				<span class="description">
 				{{ if isset .Params "description" }}
 					{{ .Description }}
