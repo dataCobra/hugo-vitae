@@ -129,6 +129,24 @@ free icon and also the information you need to put into this `icon` param.
 
 All configuration options can be looked up in the `exampleSite/config.toml`.
 
+### Favicon
+
+After enabling `favicon` support, create a new file inside your project `layouts/partials` folder named `favicon.html`, and setup favicon as you need
+
+```html
+<link rel="shortcut icon" href="{{ relURL "favicon.ico" }}" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ relURL "apple-touch-icon.png" }}" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ relURL "favicon-32x32.png" }}" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{ relURL "favicon-16x16.png" }}" />
+
+<link rel="mask-icon" color="#00E" href="{{ relURL "safari-pinned-tab.svg" }}" />
+
+<meta name="msapplication-TileColor" content="#00E" />
+```
+
+You can generate your favicons using [realfavicongenerator.net](https://realfavicongenerator.net).
+
 ### Front matter options
 
 **math(bool)**
