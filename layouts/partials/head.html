@@ -26,8 +26,7 @@
 	{{- template "_internal/twitter_cards.html" . -}}
 	<!-- If favicon is true in config use the favicon files-->
 	{{- if eq .Site.Params.favicon true -}}
-	<link rel="icon" type="image/png" href="{{ relURL "/favicon-32x32.png" }}" sizes="32x32">
-	<link rel="icon" type="image/png" href="{{ relURL "/favicon-16x16.png" }}" sizes="16x16">
+	{{ partial "favicon.html" . }}
 	{{- end -}}
 	<!-- Add rss+xml functionality -->
 	{{- with .OutputFormats.Get "rss" -}}
