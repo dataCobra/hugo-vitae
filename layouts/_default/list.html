@@ -31,13 +31,11 @@
 				{{ end }}
 				</div>
 				<span class="description">
-					{{ if isset .Params "description" }}
+				{{ if isset .Params "description" }}
 					{{ .Description }}
-					{{ else if gt (len .Plain) 120 }}
-					{{ slicestr .Plain 0 120 | htmlUnescape }}...
-					{{ else }}
-					{{ .Plain  | htmlUnescape }}
-					{{ end }}
+				{{ else }}
+					{{ .Plain  | htmlUnescape | safeHTML | truncate 120 }}
+				{{ end }}
 				</span>
 			</div>
 		</div>
