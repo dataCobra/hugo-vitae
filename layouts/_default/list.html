@@ -20,13 +20,11 @@
 			<div class="matter">
 				<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
 				<span class="description">
-					{{ if isset .Params "description" }}
+				{{ if isset .Params "description" }}
 					{{ .Description }}
-					{{ else if gt (len .Plain) 120 }}
-					{{ slicestr .Plain 0 120 | htmlUnescape }}...
-					{{ else }}
-					{{ .Plain  | htmlUnescape }}
-					{{ end }}
+				{{ else }}
+					{{ .Plain  | htmlUnescape | safeHTML | truncate 120 }}
+				{{ end }}
 				</span>
 			</div>
 		</div>

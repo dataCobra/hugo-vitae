@@ -72,11 +72,9 @@
 					<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
 					<span class="description">
 					{{ if isset .Params "description" }}
-					{{ .Description }}
-					{{ else if gt (len .Plain) 120 }}
-					{{ slicestr .Plain 0 120 | htmlUnescape }}...
+						{{ .Description }}
 					{{ else }}
-					{{ .Plain | htmlUnescape }}
+						{{ .Plain | htmlUnescape | safeHTML | truncate 120 }}
 					{{ end }}
 					</span>
 				</div>
