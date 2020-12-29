@@ -34,7 +34,7 @@
 		</div>
 	</div>
 	<div class="markdown">
-		{{ .Content }}
+	{{ .Content | htmlUnescape | safeHTML }}
 	</div>
 	{{ if ne (in .Site.Params.disableTaxoTypes .Type) true }}
 	{{ $pagename := .Page.Title }}
