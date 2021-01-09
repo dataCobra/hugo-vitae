@@ -10,7 +10,7 @@
 	{{ if isset .Params "author" }}
 		<p>
 		{{ if isset .Params "authorlink" }}
-		{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}">{{ .Params.author }}</a>
+		{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
 		{{ else }}
 		{{ i18n "authorpretext" }} {{ .Params.author }}
 		{{ end }}
