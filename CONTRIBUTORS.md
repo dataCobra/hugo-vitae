@@ -12,3 +12,4 @@ collaboration of others.
 * [Jon Besga](https://github.com/jonbesga)
 * [Mochammad Ihza Rizky Karim](https://github.com/ihzarizkyk)
 * [Bernardo Ayala](https://github.com/nardoyala)
+* [Mattia Panzeri](https://github.com/panz3r)
