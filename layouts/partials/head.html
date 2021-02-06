@@ -20,7 +20,7 @@
 	{{- end -}}
 	<!-- Description is either out of the config or in front matter of a page -->
 	{{- if or .Description $.Site.Params.description -}}
-	<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+	<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ if isset .Params "description" }}{{ .Description }}{{ else }}{{ .Plain  | htmlUnescape | safeHTML | truncate 140 }}{{ end }}{{ end }}">
 	{{- end -}}
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/twitter_cards.html" . -}}

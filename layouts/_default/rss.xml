@@ -45,7 +45,7 @@
 			{{ if isset .Params "description" }}
 				{{ .Description }}
 			{{ else }}
-				{{ .Plain | htmlUnescape | safeHTML | truncate 120 }}
+				{{ .Plain | htmlUnescape | safeHTML | truncate 140 }}
 			{{ end }}
 			</description>
 		</item>
