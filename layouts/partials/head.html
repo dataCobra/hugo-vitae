@@ -53,4 +53,5 @@
 	{{- else -}}
 	<title>{{ .Title }} | {{ .Site.Title }}</title>
 	{{- end -}}
+	{{- partial "extend_head.html" . -}}
 </head>
