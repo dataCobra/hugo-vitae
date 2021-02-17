@@ -6,4 +6,4 @@
 I am currently working out how to proceed with the theme and what
 improvements and changes to consider for the upcoming release.
 
-Licensed under the [GPL-2.0](https://raw.githubusercontent.com/dataCobra/hugo-vitae/master/LICENSE.md).
+Licensed under the [GPL-3.0-or-later](https://raw.githubusercontent.com/dataCobra/hugo-vitae/master/COPYING).
