@@ -2,7 +2,7 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "Vitae"
-license = "GNU GPLv3"
+license = "GPL-3.0-or-later"
 licenselink = "https://github.com/dataCobra/hugo-vitae/blob/master/COPYING"
 description = "Vitae is a feature-rich blog theme for Hugo that focuses on your content."
 homepage = "https://github.com/dataCobra/hugo-vitae"
