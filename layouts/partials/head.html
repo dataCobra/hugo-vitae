@@ -37,12 +37,6 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" />
-	<!-- Add math typesetting with KaTeX if math is set -->
-	{{- if or .Params.math .Site.Params.math -}}
-	<link rel="stylesheet" href="{{ relURL "/css/katex.min.css" }}" crossorigin="anonymous">
-	<script defer src="{{ relURL "js/katex.min.js" }}" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-	<script defer src="{{ relURL "js/auto-render.min.js" }}" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-	{{- end -}}
 	<!-- Use customcss if you like -->
 	{{- if isset .Site.Params "customcss" -}}
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL .Site.Params.customCSS }}" />
