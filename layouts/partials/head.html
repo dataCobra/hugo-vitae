@@ -1,51 +1,51 @@
 <head>
-	<!-- Show which Hugo version was used -->
-	{{ hugo.Generator }}
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!--Showing Thumbnail Title Article / Post-->
-	<meta property="og:title" content="{{ .Title }}">
-	<!--Showing Thumbnail Image Article / Post-->
-	{{ if isset .Params "image" }}
-	<meta property="og:image" content="{{ relURL .Params.image }}">
-	{{ end }}
-	<!-- If a author is set for the page it will be used -->
-	{{- with $.Param "author" -}}
-	<meta name="author" content="{{ . }}">
-	{{- end -}}
-	<!-- Home will use keywords from config and page will use tags front matter as keywords -->
-	{{- if or .Params.tags $.Site.Params.keywords -}}
-	<meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "," }}{{ else }}{{ delimit $.Site.Params.keywords "," }}{{ end }}">
-	{{- end -}}
-	<!-- Description is either out of the config or in front matter of a page -->
-	{{- if or .Description $.Site.Params.description -}}
-	<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ if isset .Params "description" }}{{ .Description }}{{ else }}{{ .Plain  | htmlUnescape | safeHTML | truncate 140 }}{{ end }}{{ end }}">
-	{{- end -}}
-	{{- template "_internal/opengraph.html" . -}}
-	{{- template "_internal/twitter_cards.html" . -}}
-	<!-- If favicon is true in config use the favicon files-->
-	{{- if eq .Site.Params.favicon true -}}
-	<link rel="icon" type="image/png" href="{{ relURL "/favicon-32x32.png" }}" sizes="32x32">
-	<link rel="icon" type="image/png" href="{{ relURL "/favicon-16x16.png" }}" sizes="16x16">
-	{{- end -}}
-	<!-- Add rss+xml functionality -->
-	{{- with .OutputFormats.Get "rss" -}}
-	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-	{{- end -}}
-	<!-- Add all css files that are necessary -->
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" />
-	<!-- Use customcss if you like -->
-	{{- if isset .Site.Params "customcss" -}}
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL .Site.Params.customCSS }}" />
-	{{- end -}}
-	<!-- Use a SEO friendly title tag-->
-	{{- if .IsHome -}}
-	<title>{{ .Site.Title }}{{ if isset .Site.Params "pagetitle" }} - {{ .Site.Params.Pagetitle }}{{ end }} </title>
-	{{- else -}}
-	<title>{{ .Title }} | {{ .Site.Title }}</title>
-	{{- end -}}
-	{{- partial "extend_head.html" . -}}
+<!-- Show which Hugo version was used -->
+{{- hugo.Generator }}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--Showing Thumbnail Title Article / Post-->
+<meta property="og:title" content="{{ .Title }}">
+<!--Showing Thumbnail Image Article / Post-->
+{{- if isset .Params "image" -}}
+<meta property="og:image" content="{{ relURL .Params.image }}">
+{{- end -}}
+<!-- If a author is set for the page it will be used -->
+{{- with $.Param "author" -}}
+<meta name="author" content="{{ . }}">
+{{- end -}}
+<!-- Home will use keywords from config and page will use tags front matter as keywords -->
+{{- if or .Params.tags $.Site.Params.keywords -}}
+<meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "," }}{{ else }}{{ delimit $.Site.Params.keywords "," }}{{ end }}">
+{{- end -}}
+<!-- Description is either out of the config or in front matter of a page -->
+{{- if or .Description $.Site.Params.description -}}
+<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ if isset .Params "description" }}{{ .Description }}{{ else }}{{ .Plain  | htmlUnescape | safeHTML | truncate 140 }}{{ end }}{{ end }}">
+{{- end -}}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+<!-- If favicon is true in config use the favicon files-->
+{{- if eq .Site.Params.favicon true -}}
+<link rel="icon" type="image/png" href="{{ relURL "/favicon-32x32.png" }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ relURL "/favicon-16x16.png" }}" sizes="16x16">
+{{- end -}}
+<!-- Add rss+xml functionality -->
+{{- with .OutputFormats.Get "rss" -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{- end -}}
+<!-- Add all css files that are necessary -->
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" />
+<!-- Use customcss if you like -->
+{{- if isset .Site.Params "customcss" -}}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL .Site.Params.customCSS }}" />
+{{- end -}}
+<!-- Use a SEO friendly title tag-->
+{{- if .IsHome -}}
+<title>{{ .Site.Title }}{{ if isset .Site.Params "pagetitle" }} - {{ .Site.Params.Pagetitle }}{{ end }}</title>
+{{- else -}}
+<title>{{ .Title }} | {{ .Site.Title }}</title>
+{{- end -}}
+{{- partial "extend_head.html" . -}}
 </head>

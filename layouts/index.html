@@ -1,99 +1,99 @@
-{{ define "main" -}}
+{{- define "main" }}
 {{ if eq .Site.Params.homepage true }}
 {{ with .Site.GetPage "/homepage.md" }}
 <div class="post">
-	{{ if isset .Params "image" }}
-	<div class="post-image">
-			<img src="{{ relURL .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
-	</div>
-	{{ end }}
-	<div class="author">
-		{{ if eq .Site.Params.listAuthor true}}
-		{{ if isset .Params "author" }}
-		<p>
-		{{ if isset .Params "authorlink" }}
-		{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
-		{{ else }}
-		{{ i18n "authorpretext" }} {{ .Params.author }}
-		{{ end }}
-		</p>
-		{{ end }}
-		{{ end }}
-	</div>
-	<div class="post-header">
-		{{ if ne .Date.Year 1 }}
-		<div class="meta">
-		{{ if not .Params.nodate }}
-			<div class="date">
-				<span class="day">{{ dateFormat "02" .Date }}</span>
-				<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
-			</div>
-		{{ end }}
-		</div>
-		{{ end }}
-		<div class="matter">
-			<h1 class="title">{{ .Title }}</h1>
-		</div>
-	</div>
-	<div class="markdown">
-		{{ .Content }}
-	</div>
-	{{- if eq .Site.Params.comments.enabled true -}}
-	{{- $.Scratch.Set "comments" true -}}
-	{{- if and (isset .Params "type") (in .Site.Params.comments.disableOnTypes .Params.type) -}}
-	{{- $.Scratch.Set "comments" false -}}
-	{{- end -}}
-	{{- if and (isset .Params "commentable") (eq .Params.commentable false) -}}
-	{{- $.Scratch.Set "comments" false -}}
-	{{- else if and (isset .Params "commentable") (eq .Params.commentable true) -}}
-	{{- $.Scratch.Set "comments" true -}}
-	{{- end -}}
-	{{- if eq ($.Scratch.Get "comments") true -}}
-	{{- partial "comments.html" . -}}
-	{{- end -}}
-	{{- end -}}
+{{ if isset .Params "image" }}
+<div class="post-image">
+<img src="{{ relURL .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
 </div>
 {{ end }}
+<div class="author">
+{{ if eq .Site.Params.listAuthor true}}
+{{ if isset .Params "author" }}
+<p>
+{{ if isset .Params "authorlink" }}
+{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
 {{ else }}
-<div class="recent-posts">
-	<div class="posts">
-	{{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
-	{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-	{{ range $paginator.Pages }}
-		<div class="post">
-			<div class="post-header">
-				<div class="meta">
-					<div class="date">
-						<span class="day">{{ dateFormat "02" .Date }}</span>
-						<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
-					</div>
-				</div>
-				<div class="matter">
-					<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
-					<div class="author">
-					{{ if eq .Site.Params.listAuthor true}}
-						{{ if isset .Params "author" }}
-							{{ if isset .Params "authorlink" }}
-								{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
-							{{ else }}
-								{{ i18n "authorpretext" }} {{ .Params.author }}
-							{{ end }}
-						{{ end }}
-					{{ end }}
-					</div>
-					<span class="description">
-					{{ if isset .Params "description" }}
-						{{ .Description }}
-					{{ else }}
-						{{ .Plain | htmlUnescape | safeHTML | truncate 140 }}
-					{{ end }}
-					</span>
-				</div>
-			</div>
-		</div>
-	{{ end }}
-	{{ partial "paginator.html" . }}
-	</div>
+{{ i18n "authorpretext" }} {{ .Params.author }}
+{{ end }}
+</p>
+{{ end }}
+{{ end }}
+</div>
+<div class="post-header">
+{{ if ne .Date.Year 1 }}
+<div class="meta">
+{{ if not .Params.nodate }}
+<div class="date">
+<span class="day">{{ dateFormat "02" .Date }}</span>
+<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
 </div>
 {{ end }}
+</div>
 {{ end }}
+<div class="matter">
+<h1 class="title">{{ .Title }}</h1>
+</div>
+</div>
+<div class="markdown">
+{{ .Content }}
+</div>
+{{- if eq .Site.Params.comments.enabled true -}}
+{{- $.Scratch.Set "comments" true -}}
+{{- if and (isset .Params "type") (in .Site.Params.comments.disableOnTypes .Params.type) -}}
+{{- $.Scratch.Set "comments" false -}}
+{{- end -}}
+{{- if and (isset .Params "commentable") (eq .Params.commentable false) -}}
+{{- $.Scratch.Set "comments" false -}}
+{{- else if and (isset .Params "commentable") (eq .Params.commentable true) -}}
+{{- $.Scratch.Set "comments" true -}}
+{{- end -}}
+{{- if eq ($.Scratch.Get "comments") true -}}
+{{- partial "comments.html" . -}}
+{{- end -}}
+{{- end -}}
+</div>
+{{ end }}
+{{- else }}
+<div class="recent-posts">
+<div class="posts">
+{{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+{{ range $paginator.Pages }}
+<div class="post">
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">{{ dateFormat "02" .Date }}</span>
+<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
+</div>
+</div>
+<div class="matter">
+<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
+<div class="author">
+{{ if eq .Site.Params.listAuthor true}}
+{{ if isset .Params "author" }}
+{{ if isset .Params "authorlink" }}
+{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
+{{ else }}
+{{ i18n "authorpretext" }} {{ .Params.author }}
+{{ end }}
+{{ end }}
+{{ end }}
+</div>
+<span class="description">
+{{ if isset .Params "description" }}
+{{ .Description }}
+{{ else }}
+{{ .Plain | htmlUnescape | safeHTML | truncate 140 }}
+{{ end }}
+</span>
+</div>
+</div>
+</div>
+{{ end }}
+{{ partial "paginator.html" . }}
+</div>
+</div>
+{{ end }}
+{{- end }}
