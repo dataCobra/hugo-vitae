@@ -1,14 +1,14 @@
 {{- define "main" }}
-{{ if isset .Data "Term" }}
+{{- if isset .Data "Term" }}
 <h1 class="page-title">{{ humanize .Data.Term }}</h1>
-{{ else }}
+{{- else }}
 <h1 class="page-title">{{ .Title }}</h1>
-{{ end }}
-{{.Content}}
+{{- end -}}
+{{ .Content }}
 <ul class="posts flat">
-{{- range .Data.Pages -}}
-{{- if (in .Site.Params.excludedTypes .Type) -}}
-{{- else -}}
+{{- range .Data.Pages }}
+{{- if (in .Site.Params.excludedTypes .Type) }}
+{{- else }}
 <li class="post">
 <div class="post-header">
 <div class="meta">
@@ -20,27 +20,21 @@
 <div class="matter">
 <h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
 <div class="author">
-{{ if eq .Site.Params.listAuthor true }}
-{{ if isset .Params "author" }}
-{{ if isset .Params "authorlink" }}
+{{- if eq .Site.Params.listAuthor true }}
+{{- if isset .Params "author" }}
+{{- if isset .Params "authorlink" }}
 {{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
-{{ else }}
+{{- else }}
 {{ i18n "authorpretext" }} {{ .Params.author }}
-{{ end }}
-{{ end }}
-{{ end }}
+{{- end }}
+{{- end }}
+{{- end }}
 </div>
-<span class="description">
-{{ if isset .Params "description" }}
-{{ .Description }}
-{{ else }}
-{{ .Plain  | htmlUnescape | safeHTML | truncate 140 }}
-{{ end }}
-</span>
+<span class="description">{{ if isset .Params "description" }}{{ .Description }}{{ else }}{{ .Plain  | htmlUnescape | safeHTML | truncate 140 }}{{ end }}</span>
 </div>
 </div>
 </li>
-{{- end -}}
-{{- end -}}
+{{- end }}
+{{- end }}
 </ul>
 {{- end }}
