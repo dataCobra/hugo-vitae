@@ -1,7 +1,6 @@
 User-agent: *
-
-{{- range .Pages -}}
-{{ if .Params.norobots }}
+{{ range .Pages }}
+{{- if .Params.norobots }}
 Disallow: {{ .RelPermalink }}
-{{- end -}}
-{{- end -}}
+{{- end }}
+{{- end }}
