@@ -1,8 +1,8 @@
 {{- define "main" }}
 <div class="post">
-{{- if isset .Params "image" }}
+{{- if isset .Params "images" }}
 <div class="post-image">
-<img src="{{ relURL .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
+<img src="{{ index .Params.images 0 | relURL }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
 </div>
 {{- end }}
 <div class="author">
