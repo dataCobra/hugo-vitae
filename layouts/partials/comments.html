@@ -1,5 +1,5 @@
-{{ if eq site.Params.comments.engine "disqus" }}
+{{- if eq site.Params.comments.engine "disqus" }}
 {{ partial "comments/disqus.html" . }}
-{{ else if eq site.Params.comments.engine "commento" }}
+{{- else if eq site.Params.comments.engine "commento" }}
 {{ partial "comments/commento.html" . }}
-{{ end }}
+{{- end }}
