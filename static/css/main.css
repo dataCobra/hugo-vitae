@@ -38,6 +38,10 @@
   src: local('Roboto Mono'), url('../webfonts/RobotoMono-Regular.woff') format('woff');
 }
 
+html {
+  background-color: #FBFBFB;
+}
+
 body {
   font-family: "Roboto Regular", serif;
   font-weight: 400;
