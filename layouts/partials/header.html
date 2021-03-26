@@ -6,15 +6,26 @@
 {{- end }}
 <div id="titletext">
 {{- if .IsHome }}
+{{- if isset .Site.Params "subtitle" }}
 <h1 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 {{- else }}
+<h1 id="titleonly"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+{{- end }}
+{{- else }}
+{{- if isset .Site.Params "subtitle" }}
 <h2 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+{{- else }}
+<h2 id="titleonly"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+{{- end }}
 {{- end }}
 </div>
-<div id="title-description">
 {{- if isset .Site.Params "subtitle" }}
+<div id="title-description">
 <p id="subtitle">{{ .Site.Params.Subtitle | markdownify }}</p>
+{{- else }}
+<div id="title-social">
 {{- end }}
+{{- if isset .Site.Params "social" }}
 <div id="social">
 <nav><ul>
 {{- range $index, $key := .Site.Params.Social }}
@@ -26,6 +37,7 @@
 {{- end }}
 </ul></nav>
 </div>
+{{- end }}
 </div>
 {{- if isset .Site.Menus "main" }}
 <div id="mainmenu">

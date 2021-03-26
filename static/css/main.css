@@ -245,9 +245,27 @@ table th {
   color: #808080;
 }
 
+#titleonly {
+  font-size: 4.75rem;
+  margin: 0;
+}
+
+#titleonly a {
+  color: #333;
+}
+
+#titleonly a:hover {
+  color: #808080;
+}
+
 #title-description {
   display: flex;
   justify-content: space-between;
+}
+
+#title-social {
+  float: right;
+  margin-top: -54px;
 }
 
 #social nav {
@@ -352,6 +370,10 @@ table th {
     font-size: 0.85em;
     text-decoration: none;
     margin: 0 10px 0 0;
+}
+
+.tags p {
+  margin: 10px 0 10px 0;
 }
 
 .post .tags a:hover {
@@ -497,6 +519,10 @@ p code {
     padding: 15px;
   }
 
+  header {
+    text-align: center;
+  }
+
   h1 {
     font-size: 1.8rem;
   }
@@ -535,12 +561,24 @@ p code {
     line-height: 1em;
   }
 
+  #titleonly {
+    line-height: 1em;
+    font-size: 4rem;
+    margin: 0px;
+    text-align: center;
+  }
+
   #titletext {
     margin: 0 0 10px 0;
   }
 
   #title-description {
     flex-direction: column;
+  }
+
+  #title-social {
+    float: none;
+    margin: 0;
   }
 
   #subtitle {
