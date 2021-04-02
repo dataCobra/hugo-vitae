@@ -627,6 +627,10 @@ p code {
     margin: 5px 0 5px 0;
   }
 
+  #social nav {
+    max-width: none;
+  }
+
   #social nav ul {
     justify-content: center;
   }
