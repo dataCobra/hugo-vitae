@@ -311,6 +311,7 @@ table th {
 
 #social nav {
   margin: auto 0;
+  max-width: 128px;
 }
 
 #social nav ul {
