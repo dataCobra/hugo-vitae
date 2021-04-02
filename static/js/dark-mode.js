@@ -8,6 +8,8 @@ if (currentTheme) {
         document.querySelector('i.dark-mode.icons.fas').classList.remove('fa-moon');
         document.querySelector('i.dark-mode.icons.fas').classList.add('fa-sun');
     }
+} else {
+    currentTheme = localStorage.setItem('theme', 'light')
 }
 
 function switchTheme() {
