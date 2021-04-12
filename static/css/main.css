@@ -386,6 +386,10 @@ table th {
     font-weight: bold;
 }
 
+.post {
+    overflow: hidden;
+}
+
 .post .title.small {
     margin: 0 0 10px 0;
     font-family: "Roboto Slab Regular", serif;
@@ -553,6 +557,14 @@ p code {
   border-radius: 5px;
   background: var(--inline-cd-color);
   padding: 0px 4px;
+}
+
+.left, .alignleft {
+  float: left;
+}
+
+.right, .alignright {
+  float: right;
 }
 
 @media screen and (max-width: 800px) {
