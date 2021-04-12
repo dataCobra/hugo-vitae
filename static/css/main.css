@@ -354,6 +354,10 @@ table th {
     margin-bottom: 45px;
 }
 
+.flat .post {
+    margin-bottom: 45px;
+}
+
 .post-header {
     display: flex;
 }
@@ -386,17 +390,13 @@ table th {
     font-weight: bold;
 }
 
-.post {
+.markdown {
     overflow: hidden;
 }
 
 .post .title.small {
     margin: 0 0 10px 0;
     font-family: "Roboto Slab Regular", serif;
-}
-
-.post .post-header {
-    margin-bottom: 30px;
 }
 
 .post .draft-label {
@@ -665,5 +665,13 @@ p code {
 
   .icons {
     font-size: 1.8rem;
+  }
+
+  .left, .alignleft {
+    float: none;
+  }
+
+  .right, .alignright {
+    float: none;
   }
 }
