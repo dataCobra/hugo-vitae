@@ -18,6 +18,7 @@
 </div>
 </div>
 <div class="matter">
+<article>
 <h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
 {{- if eq .Site.Params.listAuthor true }}
 <div class="author">
@@ -31,6 +32,7 @@
 </div>
 {{- end }}
 <span class="description">{{ if isset .Params "description" }}{{ .Description }}{{ else }}{{ .Plain  | htmlUnescape | safeHTML | truncate 140 }}{{ end }}</span>
+</article>
 </div>
 </div>
 </li>

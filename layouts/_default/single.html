@@ -23,6 +23,7 @@
 {{- end }}
 </div>
 {{- end }}
+<article>
 <div class="matter">
 <h1 class="title">{{ .Title }}</h1>
 </div>
@@ -30,6 +31,7 @@
 <div class="markdown">
 {{ .Content }}
 </div>
+</article>
 {{- if ne (in .Site.Params.disableTaxoTypes .Type) true }}
 {{- $pagename := .Page.Title }}
 {{- $notaxo := .Params.notaxonomy }}
