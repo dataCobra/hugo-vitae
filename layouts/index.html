@@ -1,4 +1,56 @@
 {{- define "main" }}
+{{ if eq .Site.Params.homepage true }}
+{{ with .Site.GetPage "/homepage.md" }}
+<div class="post">
+{{- if isset .Params "images" }}
+<div class="post-image">
+<img src="{{ index .Params.images 0 | relURL }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
+</div>
+{{- end }}
+<div class="author">
+{{- if eq .Site.Params.listAuthor true}}
+{{- if isset .Params "author" }}
+<p>{{ if isset .Params "authorlink" }}{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>{{- else }}{{ i18n "authorpretext" }} {{ .Params.author }}{{ end }}</p>
+{{- end }}
+{{- end }}
+</div>
+<div class="post-header">
+{{- if ne .Date.Year 1 }}
+<div class="meta">
+{{- if not .Params.nodate }}
+<div class="date">
+<span class="day">{{ dateFormat "02" .Date }}</span>
+<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
+</div>
+{{- end }}
+</div>
+{{- end }}
+<article>
+<div class="matter">
+<h1 class="title">{{ .Title }}</h1>
+</div>
+</div>
+<div class="markdown">
+{{ .Content }}
+</div>
+</article>
+{{- if eq .Site.Params.comments.enabled true }}
+{{- $.Scratch.Set "comments" true }}
+{{- if and (isset .Params "type") (in .Site.Params.comments.disableOnTypes .Params.type) }}
+{{- $.Scratch.Set "comments" false }}
+{{- end }}
+{{- if and (isset .Params "commentable") (eq .Params.commentable false) }}
+{{- $.Scratch.Set "comments" false -}}
+{{- else if and (isset .Params "commentable") (eq .Params.commentable true) }}
+{{- $.Scratch.Set "comments" true }}
+{{- end }}
+{{- if eq ($.Scratch.Get "comments") true }}
+{{- partial "comments.html" . }}
+{{- end }}
+{{- end }}
+</div>
+{{- end }}
+{{- else }}
 <div class="recent-posts">
 <div class="posts">
 {{- $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
@@ -35,4 +87,5 @@
 {{- partial "paginator.html" . }}
 </div>
 </div>
+{{- end }}
 {{- end }}
