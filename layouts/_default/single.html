@@ -1,5 +1,6 @@
 {{- define "main" }}
 <div class="post">
+<article>
 {{- if isset .Params "images" }}
 <div class="post-image">
 <img src="{{ index .Params.images 0 | relURL }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
@@ -23,7 +24,6 @@
 {{- end }}
 </div>
 {{- end }}
-<article>
 <div class="matter">
 <h1 class="title">{{ .Title }}</h1>
 </div>
@@ -31,7 +31,6 @@
 <div class="markdown">
 {{ .Content }}
 </div>
-</article>
 {{- if ne (in .Site.Params.disableTaxoTypes .Type) true }}
 {{- $pagename := .Page.Title }}
 {{- $notaxo := .Params.notaxonomy }}
@@ -76,5 +75,6 @@
 {{- partial "comments.html" . }}
 {{- end }}
 {{- end }}
+</article>
 </div>
 {{- end }}
