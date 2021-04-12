@@ -24,6 +24,14 @@
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" />
+{{- if or .Params.math .Site.Params.math -}}
+<link rel="stylesheet" href="{{ relURL "/css/katex.css" }}" crossorigin="anonymous">
+<script defer src="{{ relURL "js/katex.js" }}"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
+<script defer src="{{ relURL "js/auto-render.js" }}" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+{{- end -}}
 {{- if isset .Site.Params "customcss" }}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL .Site.Params.customCSS }}" />
 {{- end }}
