@@ -53,6 +53,18 @@
 		});
 	</script>
 	{{- end -}}
+	<!-- Use customJS if you like -->
+	{{- if .Site.Params.customJS.enabled -}}
+	<script
+		{{ if eq .Site.Params.customJS.async true }} {{ "async" | safeHTMLAttr}}{{ end }}
+		{{ if eq .Site.Params.customJS.defer true }} {{ "defer" | safeHTMLAttr}}{{ end }}
+		{{ if eq .Site.Params.customJS.nomodule true }} {{ "nomodule" | safeHTMLAttr}}{{ end }}
+		{{ if isset .Site.Params.customJS "crossorigin" }} {{ printf "crossorigin=%q" .Site.Params.customJs.crossorigin | safeHTMLAttr }}{{ end }}
+		{{ if isset .Site.Params.customJS "integrity" }} {{ printf "integrity=%q" .Site.Params.customJs.integrity | safeHTMLAttr }}{{ end }}
+		{{ if isset .Site.Params.customJS "referrerpolicy" }} {{ printf "referrerpolicy=%q" .Site.Params.customJs.referrerpolicy | safeHTMLAttr }}{{ end }}
+		{{ printf "src=%q" (.Site.Params.customJS.src | relURL) | safeHTMLAttr }}>
+	</script>
+	{{- end -}}
 	<!-- Use customCSS if you like -->
 	{{- if isset .Site.Params "customCSS" -}}
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL .Site.Params.customCSS }}" />
