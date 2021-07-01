@@ -2,7 +2,7 @@
 .Site.Params.keywords  # Add meta keywords in head part (Site Keywords or Tags of Page)
 .Site.Params.description # Add meta description in head part (Site Description or Description of Page)
 .Site.Params.math # Add math typesetting with KaTeX (Global with this param)
-.Site.Params.customcss # Add path to customcss you want to add to the theme
+.Site.Params.customCSS # Add path to customCSS you want to add to the theme
 .Site.Params.pagetitle # Add pagetitle to homepage <title> tag
 .Site.Params.avatar # Add a avatar to your website
 .Site.Params.subtitle # Add a subtitle to your website
