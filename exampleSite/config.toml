@@ -60,6 +60,15 @@ googleAnalytics = ""
 	# Custom CSS applied to default styles. (Path could be "static/css/")
 	#customCSS = "css/custom.css"
 
+	# Show reading time on a post
+	readingTime = false
+
+	# Show word count on a post
+        wordCount = false
+
+	# Show author on a post (groups with readingTime and wordCount)
+	hideAuthorOnPost = true
+
 # Comments
 [params.comments]
 # Enable Comments with "true"
