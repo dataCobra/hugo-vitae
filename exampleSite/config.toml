@@ -49,7 +49,7 @@ googleAnalytics = ""
 	#favicon = true
 
 	# Add list of sections that should show up on the homepage
-        mainSections = ["post"]
+  mainSections = ["post"]
 
 	# Add list of Sections/Types that should no be considered by RSS
 	#nofeedSections = ["post"]
@@ -59,6 +59,15 @@ googleAnalytics = ""
 
 	# Custom CSS applied to default styles. (Path could be "static/css/")
 	#customCSS = "css/custom.css"
+  
+	# Show reading time on a post
+	readingTime = false
+
+	# Show word count on a post
+  wordCount = false
+
+	# Show author on a post (groups with readingTime and wordCount)
+	hideAuthorOnPost = true
 
 # Custom JavaScript
 [params.customJS]

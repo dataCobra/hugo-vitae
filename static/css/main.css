@@ -371,6 +371,18 @@ table th {
     margin-bottom: 0;
 }
 
+.post-meta {
+  color: #808080;
+  font-size: 14px;
+  font-style: italic;
+  margin: 0 0 10px;
+}
+
+.post-meta a {
+  color: #00E;
+  text-decoration: none;
+}
+
 .pagination {
     margin: 0;
     padding: 0;

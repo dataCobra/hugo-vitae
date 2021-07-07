@@ -31,6 +31,9 @@
 		{{ end }}
 		<div class="matter">
 			<h1 class="title">{{ .Title }}</h1>
+			<p class="post-meta">
+				{{ partial "post_meta.html" . }}
+			</p>
 		</div>
 	</div>
 	<div class="markdown">
