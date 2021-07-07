@@ -60,6 +60,25 @@ googleAnalytics = ""
 	# Custom CSS applied to default styles. (Path could be "static/css/")
 	#customCSS = "css/custom.css"
 
+# Custom JavaScript
+[params.customJS]
+# enable Javascript by setting to true
+#enabled = true
+# add a filepath (could be "static/js/")
+#src = "js/main.js"
+# specifies which referrer information to send when fetching the script
+#referrerpolicy = "no-referrer"
+# specifies that the script should not be executed in browsers supporting ES2015 modules
+#nomodule = false
+# Allows a browser to check for integrity to ensure the code hasn't been manipulated
+#integrity= ""
+# execute the script when page has finished parsing (external only)
+#defer = true
+# sets the mode of the request to an http cors request
+#crossorigin=true
+# executes the script asynchronously (external only)
+#async = true
+
 # Comments
 [params.comments]
 # Enable Comments with "true"
