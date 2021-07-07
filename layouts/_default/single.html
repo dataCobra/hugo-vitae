@@ -5,19 +5,6 @@
 		<img src="{{ relURL .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
 	</div>
 	{{ end }}
-	<div class="author">
-	{{ if eq .Site.Params.listAuthor true}}
-	{{ if isset .Params "author" }}
-		<p>
-		{{ if isset .Params "authorlink" }}
-		{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
-		{{ else }}
-		{{ i18n "authorpretext" }} {{ .Params.author }}
-		{{ end }}
-		</p>
-	{{ end }}
-	{{ end }}
-	</div>
 	<div class="post-header">
 	{{ if ne .Date.Year 1 }}
 		<div class="meta">
