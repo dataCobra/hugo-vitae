@@ -58,7 +58,7 @@ googleAnalytics = ""
 	#disableTaxoTypes = [""]
 
 	# Custom CSS applied to default styles. (Path could be "static/css/")
-	#customCSS = "css/custom.css"
+	#customcss = "css/custom.css"
 
 	# Show reading time on a post
 	readingTime = false
@@ -67,10 +67,10 @@ googleAnalytics = ""
 	wordCount = false
 
 	# Show author on a post (groups with readingTime and wordCount)
-	hideAuthorOnPost = true
+	hideAuthor = true
 
 # Custom JavaScript
-[params.customJS]
+[params.customjs]
 # enable Javascript by setting to true
 #enabled = true
 # add a filepath (could be "static/js/")
