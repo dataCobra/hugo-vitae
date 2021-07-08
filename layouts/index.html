@@ -7,19 +7,6 @@
 			<img src="{{ relURL .Params.image }}" {{ if isset .Params "imagetext" }}alt="{{ .Params.imagetext }}"{{ end }}>
 	</div>
 	{{ end }}
-	<div class="author">
-		{{ if eq .Site.Params.listAuthor true}}
-		{{ if isset .Params "author" }}
-		<p>
-		{{ if isset .Params "authorlink" }}
-		{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
-		{{ else }}
-		{{ i18n "authorpretext" }} {{ .Params.author }}
-		{{ end }}
-		</p>
-		{{ end }}
-		{{ end }}
-	</div>
 	<div class="post-header">
 		{{ if ne .Date.Year 1 }}
 		<div class="meta">
@@ -33,6 +20,9 @@
 		{{ end }}
 		<div class="matter">
 			<h1 class="title">{{ .Title }}</h1>
+			<p class="post-meta">
+				{{ partial "post_meta.html" . }}
+			</p>
 		</div>
 	</div>
 	<div class="markdown">
@@ -70,17 +60,9 @@
 				</div>
 				<div class="matter">
 					<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
-					<div class="author">
-					{{ if eq .Site.Params.listAuthor true}}
-						{{ if isset .Params "author" }}
-							{{ if isset .Params "authorlink" }}
-								{{ i18n "authorpretext" }} <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author }}</a>
-							{{ else }}
-								{{ i18n "authorpretext" }} {{ .Params.author }}
-							{{ end }}
-						{{ end }}
-					{{ end }}
-					</div>
+					<p class="post-meta">
+					{{ partial "post_meta.html" . }}
+					</p>
 					<span class="description">
 					{{ if isset .Params "description" }}
 						{{ .Description }}
