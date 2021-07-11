@@ -16,3 +16,9 @@
 
 - id: 404text
   translation: "There is not content here."
+
+- id: minutes
+  translation: "minutes"
+
+- id: words
+  translation: "words"

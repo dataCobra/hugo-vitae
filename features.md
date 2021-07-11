@@ -17,7 +17,9 @@
  - .Site.Params.avatar # Add a avatar to your website
  - .Site.Params.subtitle # Add a subtitle to your website
  - .Site.Params.social # Add different social links to your website
- - .Site.Params.listAuthor # Activate to show authors of pages if available
+ - .Site.Params.readingTime # Show reading time for a post
+ - .Site.Params.wordCount # Show word count for a post
+ - .Site.Params.hideAuthor # Show author for a post
  - .Site.Params.excludedTypes # Exclude specific types in lists
  - .Site.Params.mainSections # Add list of sections that should show up on the homepage
  - .Site.Params.nofeedSections # Add list of sections/types that should not be considered by RSS
@@ -32,13 +34,14 @@
  - .Params.tags # https://gohugo.io/variables/page/#page-level-params
  - .Params.nofeed # Don't add page to RSS file
  - .Params.math # Add math typesetting with KaTeX to a specific page
- - .Params.author # Add the author of a page (recommended with .Site.Params.listAuthor)
- - .Params.authorlink # Add the create a link to a page of the author (recommended with .Site.Params.listAuthor)
+ - .Params.author # Add the author of a page
+ - .Params.authorlink # Add the create a link to a page of the author
  - .Params.notaxonomy # Don't show this list of taxnomoies below the content
  - .Params.type # https://gohugo.io/content-management/types/
  - .Params.commentable # Enable/Disable comments for this specific page
- - .Params.hidden # Hide pages from the mainSections on the homepage
+ - .Params.hidden # Hide page from the mainSections on the homepage
  - .Params.norobots # Disallow page in robots.txt for search engines
  - .Params.nodate # Hide the publish date of specific content
  - .Params.image # Add an image to the post
  - .Params.imagetext # Add alternate text for the image to the post
+ - .Params.hidemeta # Hide the metadata (readingTime, wordCount and Author)
