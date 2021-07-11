@@ -5,6 +5,14 @@
  - .Site.Params.description # Add meta description in head part (Site Description or Description of Page)
  - .Site.Params.math # Add math typesetting with KaTeX (Global with this param)
  - .Site.Params.customcss # Add path to customcss you want to add to the theme
+ - .Site.Params.customjs.enabled # Enable/Disable customjs
+ - .Site.Params.customjs.src # add the source path
+ - .Site.Params.customjs.referrerpolicy # specifies which referrer information to send when fetching the script
+ - .Site.Params.customjs.nomodule # specifies that the script should not be executed in browsers supporting ES2015 modules
+ - .Site.Params.customjs.integrity # allows a browser to check for integrity to ensure the code hasn't been manipulated
+ - .Site.Params.customjs.defer # execute the script when page has finished parsing (external only)
+ - .Site.Params.customjs.crossorigin # sets the mode of the request to an http cors request
+ - .Site.Params.customjs.async # executes the script asynchronously (external only)
  - .Site.Params.pagetitle # Add pagetitle to homepage <title> tag
  - .Site.Params.avatar # Add a avatar to your website
  - .Site.Params.subtitle # Add a subtitle to your website

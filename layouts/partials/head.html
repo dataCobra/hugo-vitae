@@ -32,6 +32,17 @@
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
 {{- end -}}
+{{- if .Site.Params.customjs.enabled }}
+<script
+{{ if eq .Site.Params.customjs.async true }} {{ "async" | safeHTMLAttr}}{{ end }}
+{{ if eq .Site.Params.customjs.defer true }} {{ "defer" | safeHTMLAttr}}{{ end }}
+{{ if eq .Site.Params.customjs.nomodule true }} {{ "nomodule" | safeHTMLAttr}}{{ end }}
+{{ if isset .Site.Params.customjs "crossorigin" }} {{ printf "crossorigin=%q" .Site.Params.customjs.crossorigin | safeHTMLAttr }}{{ end }}
+{{ if isset .Site.Params.customjs "integrity" }} {{ printf "integrity=%q" .Site.Params.customjs.integrity | safeHTMLAttr }}{{ end }}
+{{ if isset .Site.Params.customjs "referrerpolicy" }} {{ printf "referrerpolicy=%q" .Site.Params.customjs.referrerpolicy | safeHTMLAttr }}{{ end }}
+{{ printf "src=%q" (.Site.Params.customjs.src | relURL) | safeHTMLAttr }}>
+</script>
+{{- end }}
 {{- if isset .Site.Params "customcss" }}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL .Site.Params.customCSS }}" />
 {{- end }}
