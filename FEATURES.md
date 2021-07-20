@@ -76,7 +76,7 @@ free icon and also the information you need to put into this `icon` param.
  - **.Site.Params.customcss** # Add path to customcss you want to add to the theme
  - **.Site.Params.customjs.enabled** # Enable/Disable customjs
  - **.Site.Params.customjs.src** # add the source path
- - **.Site.Params.customjs.referrerpolicy # specifies which referrer information to send when fetching the script
+ - **.Site.Params.customjs.referrerpolicy** # specifies which referrer information to send when fetching the script
  - **.Site.Params.customjs.nomodule** # specifies that the script should not be executed in browsers supporting ES2015 modules
  - **.Site.Params.customjs.integrity** # allows a browser to check for integrity to ensure the code hasn't been manipulated
  - **.Site.Params.customjs.defer** # execute the script when page has finished parsing (external only)
@@ -102,13 +102,13 @@ free icon and also the information you need to put into this `icon` param.
 
 ## Front matter options for content
 
- - **.Params.tags** # https://gohugo.io/variables/page/#page-level-params**
+ - **.Params.tags** # https://gohugo.io/variables/page/#page-level-params
  - **.Params.nofeed** # Don't add page to RSS file
  - **.Params.math** # Add math typesetting with KaTeX to a specific page
  - **.Params.author** # Add the author of a page
  - **.Params.authorlink** # Add the create a link to a page of the author
  - **.Params.notaxonomy** # Don't show this list of taxnomoies below the content
- - **.Params.type** # https://gohugo.io/content-management/types/**
+ - **.Params.type** # https://gohugo.io/content-management/types/
  - **.Params.commentable** # Enable/Disable comments for this specific page
  - **.Params.hidden** # Hide page from the mainSections on the homepage
  - **.Params.norobots** # Disallow page in robots.txt for search engines
@@ -117,4 +117,4 @@ free icon and also the information you need to put into this `icon` param.
  - **.Params.imagetext** # Add alternate text for the image to the post
  - **.Params.hidemeta** # Hide the metadata (readingTime, wordCount and Author)
 
-Examples for site configuration and front matter can be found in `examples/`.
+**Examples for site configuration and front matter can be found in `examples/`.**
