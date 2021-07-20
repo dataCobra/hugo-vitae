@@ -67,6 +67,14 @@ url = "https://github.com/dataCobra/hugo-vitae"
 On the [FontAwesome](https://fontawesome.com) website, you can look up every
 free icon and also the information you need to put into this `icon` param.
 
+## Align images
+
+There is now the possibility to align images to the left or right of the site.
+
+Example: `{{< figure src="/img/my_image.png" class=alignleft >}}`
+
+The following options for `class=` are available: right, alignright, left and alignleft.
+
 ## Site configuration options (config.toml)
 
  - **.Site.Params.homepage** # Enable/Disable homepage use instead of a list
