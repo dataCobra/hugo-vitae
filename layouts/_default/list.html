@@ -20,9 +20,11 @@
 <div class="matter">
 <article>
 <h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
+{{- if not .Params.hidemeta }}
 <p class="post-meta">
 {{ partial "post_meta.html" . }}
 </p>
+{{- end }}
 <span class="description">{{ if isset .Params "description" }}{{ .Description }}{{ else }}{{ .Plain  | htmlUnescape | safeHTML | truncate 140 }}{{ end }}</span>
 </article>
 </div>
