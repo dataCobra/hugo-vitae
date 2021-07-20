@@ -31,3 +31,6 @@ GitHub](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-o
 
 7. Let the title of your pull request clearly indicate what kind of change it
    is.
+
+If the pull request does not meet the specifications, it is pointed out once,
+if there is no improvement the PR is simply closed.
