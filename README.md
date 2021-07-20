@@ -7,11 +7,11 @@ I've finally finished the development of version 3.0 and this is the last and
 final version of Vitae. From now on only bugs will be fixed and if necessary
 the program code will be refactored.
 
+!Since version 3.0, the default branch is MAIN and no longer MASTER!
+
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/dataCobra/hugo-vitae/main/images/screenshot.png)
-
-**!Since version 3.0, the default branch is MAIN and no longer MASTER!**
 
 ## Installation
 
