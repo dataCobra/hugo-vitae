@@ -21,6 +21,9 @@ googleAnalytics = ""
 	series = "series"
 
 [params]
+	# Enable dark mode as default
+	#darkmode = true
+
 	# Use homepage.md instead of a list of posts
 	homepage = false
 

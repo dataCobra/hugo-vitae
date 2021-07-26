@@ -80,6 +80,7 @@ The following options for `class=` are available: right, alignright, left and al
  - **.Site.Params.homepage** # Enable/Disable homepage use instead of a list
  - **.Site.Params.keywords** # Add meta keywords in head part (Site Keywords or Tags of Page)
  - **.Site.Params.description** # Add meta description in head part (Site Description or Description of Page)
+ - **.Site.Params.darkmode** # Enable/Disable dark mode as default
  - **.Site.Params.math** # Add math typesetting with KaTeX (Global with this param)
  - **.Site.Params.customcss** # Add path to customcss you want to add to the theme
  - **.Site.Params.customjs.enabled** # Enable/Disable customjs
