@@ -32,6 +32,11 @@
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
 {{- end -}}
+{{- if .Site.Params.darkmode }}
+<script>
+localStorage.setItem('theme', 'dark');
+</script>
+{{- end }}
 {{- if .Site.Params.customjs.enabled }}
 <script
 {{ if eq .Site.Params.customjs.async true }} {{ "async" | safeHTMLAttr}}{{ end }}
