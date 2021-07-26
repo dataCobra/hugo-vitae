@@ -1,4 +1,4 @@
-seURL = "http://example.org/"
+BaseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Hugo Authors"
