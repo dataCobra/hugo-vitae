@@ -16,3 +16,4 @@ collaboration of others.
 * [Jörg Thalheim](https://github.com/Mic92)
 * [David Kaufmann](https://github.com/davidkaufmann)
 * [Sarath Chandra Mekala](https://github.com/sarathmekala)
+* [Jeff Schoner](https://github.com/jeffschoner)
