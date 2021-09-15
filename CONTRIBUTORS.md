@@ -17,3 +17,4 @@ collaboration of others.
 * [David Kaufmann](https://github.com/davidkaufmann)
 * [Sarath Chandra Mekala](https://github.com/sarathmekala)
 * [Jeff Schoner](https://github.com/jeffschoner)
+* [Leo Qi](https://github.com/leozqi)
