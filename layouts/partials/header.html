@@ -25,9 +25,9 @@
 {{- else }}
 <div id="title-social">
 {{- end }}
-{{- if isset .Site.Params "social" }}
 <div id="social">
 <nav><ul>
+{{- if isset .Site.Params "social" }}
 {{- range $index, $key := .Site.Params.Social }}
 {{- if $key.url }}
 <li><a href="{{ relURL $key.url }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
@@ -35,10 +35,10 @@
 <li><a href="{{ $key.cmd }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
 {{- end }}
 {{- end }}
+{{- end }}
 <li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
 </ul></nav>
 </div>
-{{- end }}
 </div>
 {{- if isset .Site.Menus "main" }}
 <div id="mainmenu">
