@@ -18,7 +18,7 @@
 </div>
 {{- end }}
 <div class="matter">
-<h1 class="title">{{ .Title }}</h1>
+<h1 class="title">{{ .Title }}{{ partial "post_label.html" (dict "post" .) }}</h1>
 {{- if not .Params.hidemeta }}
 <p class="post-meta">
 {{ partial "post_meta.html" . }}

@@ -19,7 +19,7 @@
 </div>
 <div class="matter">
 <article>
-<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a></h3>
+<h3 class="title small"><a href="{{ .RelPermalink }}">{{.Title}}{{ partial "post_label.html" (dict "post" .)}}</a></h3>
 {{- if not .Params.hidemeta }}
 <p class="post-meta">
 {{ partial "post_meta.html" . }}
