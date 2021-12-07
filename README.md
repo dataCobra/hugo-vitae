@@ -1,6 +1,14 @@
 # Vitae
 ... is a feature-rich blog theme for Hugo that **focuses on your content**.
 
+## :bell: Busy with life for the rest of the year
+
+Currently I'm pretty busy with life, that's why I currently don't work on
+the theme and why it looks abandoned at the moment.
+
+But don't worry! -> In the next year I'll will be back and maintenance and
+development will continue!
+
 ## :mega: Version 3.0 is finally released!
 
 I've finally finished the development of version 3.0 and this is the last and
