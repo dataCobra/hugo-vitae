@@ -30,3 +30,11 @@ function switchTheme() {
 }
 
 toggleSwitch.addEventListener('click', switchTheme, false);
+
+window.onload = function() {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches && !localStorage.getItem('prefers-color-scheme-dark')) {
+        localStorage.setItem('theme', 'light');
+        switchTheme();
+        localStorage.setItem('prefers-color-scheme-dark', true);
+    }
+};
