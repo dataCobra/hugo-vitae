@@ -12,7 +12,7 @@
   translation: "HTTP-404 Error"
 
 - id: 404text
-  translation: "There is not content here."
+  translation: "There is no content here."
 
 - id: minutes
   translation: "minutes"
