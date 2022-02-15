@@ -10,7 +10,9 @@ mainly fix bugs and refactor program code.
 ## Donations
 
 If you like my work and want to support me you now have the possibility to
-donate via [Liberapay](https://liberapay.com/about/). [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/liberapay/donate)
+donate via [Liberapay](https://liberapay.com/about/).
+
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/liberapay/donate)
 
 ## Screenshot
 
