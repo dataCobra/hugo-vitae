@@ -11,5 +11,5 @@ features = ["responsive", "clean", "disqus", "commento", "math", "fontawesome", 
 min_version = "0.62.0"
 
 [author]
-  name = "Benedikt 'dataCobra' Tuchen"
+  name = "Benedikt 'dataCobra' Brinkmann"
   homepage = "https://thinkbot.de"
