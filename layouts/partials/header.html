@@ -30,7 +30,7 @@
 {{- if isset .Site.Params "social" }}
 {{- range $index, $key := .Site.Params.Social }}
 {{- if $key.url }}
-<li><a href="{{ relURL $key.url }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
+<li><a href="{{ relURL $key.url }}" rel="me"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
 {{- else }}
 <li><a href="{{ $key.cmd | safeURL }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
 {{- end }}
