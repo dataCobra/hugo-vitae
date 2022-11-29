@@ -436,6 +436,10 @@ table th {
   margin: 0 0 10px;
 }
 
+.description {
+  margin: 0;
+}
+
 .pagination {
     margin: 0;
     padding: 0;
