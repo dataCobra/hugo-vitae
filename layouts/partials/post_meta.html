@@ -6,7 +6,7 @@
 {{ if .Site.Params.readingTime }} <!-- Add a separator between readingTime and WordCount if readingTime is enabled -->
 &nbsp;| &nbsp;
 {{ end }}
-<i class="fas fa-book"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
+<span aria-label="Word count:"><span class="fas fa-book" aria-hidden="true"></span></span>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
 {{ end }}
 {{ if not .Site.Params.hideAuthor }}
 {{ if isset .Params "author" }}
