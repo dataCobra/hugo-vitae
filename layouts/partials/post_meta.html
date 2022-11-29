@@ -1,6 +1,6 @@
 <span class="post-meta">
 {{ if .Site.Params.readingTime }}
-&nbsp;<i class="fas fa-clock"></i>&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "minutes" }}
+&nbsp;<span aria-label="Reading time:"><span class="fas fa-clock" aria-hidden="true"></span></span>&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "minutes" }}
 {{ end }}
 {{ if .Site.Params.wordCount }}
 {{ if .Site.Params.readingTime }} <!-- Add a separator between readingTime and WordCount if readingTime is enabled -->
