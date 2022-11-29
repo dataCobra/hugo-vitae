@@ -13,7 +13,7 @@
 {{ if or (.Site.Params.wordCount) (.Site.Params.readingTime)  }} <!-- Add a separator before author if either readingTime or  WordCount is enabled -->
 &nbsp;|&nbsp;
 {{ end }}
-<i class="fas fa-user"></i>&nbsp;
+<span aria-label="Author:"><span class="fas fa-user" aria-hidden="true"></span></span>&nbsp;
 {{ if isset .Params "authorlink" }}
 <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author | safeHTML }}</a>
 {{ else }}
