@@ -101,6 +101,7 @@ The following options for `class=` are available: right, alignright, left and al
  - **.Site.Params.excludedTypes** # Exclude specific types in lists
  - **.Site.Params.mainSections** # Add list of sections that should show up on the homepage
  - **.Site.Params.nofeedSections** # Add list of sections/types that should not be considered by RSS
+ - **.Site.Params.fullRSS** # Use a full HTML representation of the articles in the RSS feed
  - **.Site.Params.disableTaxoTypes** # Deactivate taxonomies for specific page types
  - **.Site.Params.favicon** # Activate favicons for the website
  - **.Site.Params.comments.enabled** # Enable/Disable comments for website entirely
