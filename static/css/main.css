@@ -92,6 +92,12 @@ header nav li {
   padding: 0;
 }
 
+#dark-mode {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 footer {
   font-family: "Roboto Slab Regular", serif;
   text-align: right;
@@ -428,6 +434,10 @@ table th {
   font-size: 14px;
   font-style: italic;
   margin: 0 0 10px;
+}
+
+.description {
+  margin: 0;
 }
 
 .pagination {

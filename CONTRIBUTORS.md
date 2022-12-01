@@ -18,3 +18,4 @@ collaboration of others.
 * [Sarath Chandra Mekala](https://github.com/sarathmekala)
 * [Jeff Schoner](https://github.com/jeffschoner)
 * [Leo Qi](https://github.com/leozqi)
+* [Konrad Borowski](https://github.com/xfix)

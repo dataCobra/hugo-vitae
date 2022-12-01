@@ -30,13 +30,13 @@
 {{- if isset .Site.Params "social" }}
 {{- range $index, $key := .Site.Params.Social }}
 {{- if $key.url }}
-<li><a href="{{ relURL $key.url }}" rel="me"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
+<li><a href="{{ relURL $key.url }}" rel="me" aria-label="{{ $key.name }}"><span title="{{ $key.name }}" class="icons {{ $key.icon }}" aria-hidden="true"></span></a></li>
 {{- else }}
-<li><a href="{{ $key.cmd | safeURL }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
+<li><a href="{{ $key.cmd | safeURL }}" aria-label="{{ $key.name }}"><span title="{{ $key.name }}" class="icons {{ $key.icon }}" aria-hidden="true"></span></a></li>
 {{- end }}
 {{- end }}
 {{- end }}
-<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+<li><button id="dark-mode" aria-label="Switch Dark Mode"><span title="Switch Dark Mode" class="icons fas fa-moon" aria-hidden="true"></span></button></li>
 </ul></nav>
 </div>
 </div>

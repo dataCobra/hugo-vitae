@@ -1,19 +1,19 @@
 <span class="post-meta">
 {{ if .Site.Params.readingTime }}
-&nbsp;<i class="fas fa-clock"></i>&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "minutes" }}
+&nbsp;<span aria-label="Reading time:"><span class="fas fa-clock" aria-hidden="true"></span></span>&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "minutes" }}
 {{ end }}
 {{ if .Site.Params.wordCount }}
 {{ if .Site.Params.readingTime }} <!-- Add a separator between readingTime and WordCount if readingTime is enabled -->
 &nbsp;| &nbsp;
 {{ end }}
-<i class="fas fa-book"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
+<span aria-label="Word count:"><span class="fas fa-book" aria-hidden="true"></span></span>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
 {{ end }}
 {{ if not .Site.Params.hideAuthor }}
 {{ if isset .Params "author" }}
 {{ if or (.Site.Params.wordCount) (.Site.Params.readingTime)  }} <!-- Add a separator before author if either readingTime or  WordCount is enabled -->
 &nbsp;|&nbsp;
 {{ end }}
-<i class="fas fa-user"></i>&nbsp;
+<span aria-label="Author:"><span class="fas fa-user" aria-hidden="true"></span></span>&nbsp;
 {{ if isset .Params "authorlink" }}
 <a href="{{ relURL .Params.authorlink }}" target="_blank" rel="noopener noreferrer">{{ .Params.author | safeHTML }}</a>
 {{ else }}
