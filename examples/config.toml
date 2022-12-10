@@ -43,7 +43,7 @@ googleAnalytics = ""
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "/img/vitae.jpg"
+	avatar = "img/vitae.jpg"
 
 	# Optional favicons for website
 	#favicon = true
@@ -154,4 +154,4 @@ url = "https://github.com/dataCobra/hugo-vitae"
 [[params.social]]
 name = "RSS"
 icon = "fas fa-rss"
-url = "/index.xml"
+url = "index.xml"

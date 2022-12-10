@@ -18,14 +18,14 @@
 <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ if isset .Params "description" }}{{ .Description }}{{ else }}{{ .Plain  | htmlUnescape | safeHTML | truncate 155 }}{{ end }}{{ end }}">
 {{- end }}
 {{- if eq .Site.Params.favicon true }}
-<link rel="icon" type="image/png" href="{{ relURL "/favicon-32x32.png" }}" sizes="32x32">
-<link rel="icon" type="image/png" href="{{ relURL "/favicon-16x16.png" }}" sizes="16x16">
+<link rel="icon" type="image/png" href="{{ relURL "favicon-32x32.png" }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ relURL "favicon-16x16.png" }}" sizes="16x16">
 {{- end }}
-<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
-<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
-<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "css/normalize.css" }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "css/main.css" }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "css/all.css" }}" />
 {{- if or .Params.math .Site.Params.math -}}
-<link rel="stylesheet" href="{{ relURL "/css/katex.css" }}" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ relURL "css/katex.css" }}" crossorigin="anonymous">
 <script defer src="{{ relURL "js/katex.js" }}"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
 <script defer src="{{ relURL "js/auto-render.js" }}" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
