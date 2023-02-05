@@ -19,3 +19,4 @@ collaboration of others.
 * [Jeff Schoner](https://github.com/jeffschoner)
 * [Leo Qi](https://github.com/leozqi)
 * [Konrad Borowski](https://github.com/xfix)
+* [Peter D. Faria](https://github.com/zshift)
