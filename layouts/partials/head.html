@@ -48,8 +48,8 @@ localStorage.setItem('theme', 'dark');
 {{ printf "src=%q" (.Site.Params.customjs.src | relURL) | safeHTMLAttr }}>
 </script>
 {{- end }}
-{{- if isset .Site.Params "customcss" }}
-<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL .Site.Params.customCSS }}" />
+{{ range .Site.Params.customcss -}}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ . | relURL }}">
 {{- end }}
 {{- with .OutputFormats.Get "rss" }}
 {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
