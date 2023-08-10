@@ -24,6 +24,7 @@
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "css/normalize.css" }}" />
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "css/main.css" }}" />
 <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "css/all.css" }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "css/syntax.css" }}" />
 {{- if or .Params.math .Site.Params.math -}}
 <link rel="stylesheet" href="{{ relURL "css/katex.css" }}" crossorigin="anonymous">
 <script defer src="{{ relURL "js/katex.js" }}"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
@@ -33,9 +34,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 </script>
 {{- end -}}
 {{- if .Site.Params.darkmode }}
-<script>
-localStorage.setItem('theme', 'dark');
-</script>
+<script defer src="{{ relURL "js/set-darkmode.js" }}" integrity="sha384-39mf0S3hoayjIVSl6a0CynTiUVht5xfkGSp5cIzlHTm0u2HbAUOtUjedSbYqQgU8" crossorigin="anonymous"></script>
 {{- end }}
 {{- if .Site.Params.customjs.enabled }}
 <script
