@@ -20,6 +20,11 @@ googleAnalytics = ""
 	category = "categories"
 	series = "series"
 
+[markup]
+	[markup.highlight]
+		noClasses = false
+		style = "monokai"
+
 [params]
 	# Enable dark mode as default
 	#darkmode = true
