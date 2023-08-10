@@ -20,3 +20,4 @@ collaboration of others.
 * [Leo Qi](https://github.com/leozqi)
 * [Konrad Borowski](https://github.com/xfix)
 * [Peter D. Faria](https://github.com/zshift)
+* [Sami Nieminen](https://github.com/celeroncool)
