@@ -2,12 +2,12 @@
 <footer>
 {{ with .Site.Copyright }}{{ . | markdownify }}{{ end }}
 {{- if not hugo.IsServer }}
-{{- template "_internal/google_analytics_async.html" . }}
+{{- template "_internal/google_analytics.html" . }}
 {{- end }}
 </footer>
 {{- else }}
 {{- if not hugo.IsServer }}
-{{- template "_internal/google_analytics_async.html" . }}
+{{- template "_internal/google_analytics.html" . }}
 {{- end }}
 {{- end -}}
 <script src="{{ relURL "js/dark-mode.js" }}"></script>
