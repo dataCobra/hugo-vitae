@@ -2,4 +2,6 @@
 {{ partial "comments/disqus.html" . }}
 {{- else if eq site.Params.comments.engine "commento" }}
 {{ partial "comments/commento.html" . }}
+{{- else if eq site.Params.comments.engine "isso" }}
+{{ partial "comments/isso.html" . }}
 {{- end }}

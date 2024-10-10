@@ -569,6 +569,14 @@ p code {
   float: right;
 }
 
+#isso-thread input {
+  background-color: var(--fn-color);
+}
+
+#isso-thread textarea {
+  background-color: var(--fn-color);
+}
+
 @media screen and (max-width: 800px) {
   body {
     margin: 0 auto;

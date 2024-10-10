@@ -105,10 +105,11 @@ The following options for `class=` are available: right, alignright, left and al
  - **.Site.Params.disableTaxoTypes** # Deactivate taxonomies for specific page types
  - **.Site.Params.favicon** # Activate favicons for the website
  - **.Site.Params.comments.enabled** # Enable/Disable comments for website entirely
- - **.Site.Params.comments.engine** # Either disqus or commento to choose from
+ - **.Site.Params.comments.engine** # Either disqus, commento or isso to choose from
  - **.Site.Params.comments.disableOnTypes** # Deactivate comments for specific page types
  - **.Site.Params.comments.disqus.shortname** # New param for the shortname of a disqus instance
  - **.Site.Params.comments.commento.host** # Domain http/s of commento.io system of choice
+ - **.Site.Params.comments.isso.host** # Domain of your chosen Isso instance
 
 ## Front matter options for content
 
