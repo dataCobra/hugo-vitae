@@ -103,6 +103,7 @@ enabled = false
 # Comment provider:
 #   disqus (https://disqus.com)
 #   commento (https://commento.io)
+#   isso (https://isso-comments.de/)
 #engine = "disqus"
 
 # Content types to disable comments on.
@@ -113,6 +114,9 @@ enabled = false
 
 [params.comments.commento]
 #host = "" # Paste the domain of you commento.io system
+
+[params.comments.isso]
+#host = "" # Enter the domain of your Isso instance
 
 # Navigation
 [[menu.main]]
