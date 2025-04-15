@@ -1,18 +1,11 @@
 # Vitae
 ... is a feature-rich blog theme for Hugo that **focuses on your content**.
 
-## :mega: Version 3 is finally released!
+## ⚠️ This theme is no longer worked on and archived. ⚠️
 
-The development of version 3 is finished. Currently I'm in the process of
-planning how to proceed with the development of the theme. For the moment I'll
-mainly fix bugs and refactor program code.
+Feel free to fork the repository and maintain it forward.
 
-## Donations
-
-If you like my work and want to support me you now have the possibility to
-donate via [Liberapay](https://liberapay.com/about/).
-
-[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/dataCobra)
+Thanks to everyone who used this theme and worked with me on it.
 
 ## Screenshot
 
