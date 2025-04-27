@@ -1,8 +1,8 @@
 # 🛑 Future maintenance and development 🛑
 
-__The new official version is maintained by [@farooqkz](https://github.com/farooqkz) on [Codeberg](https://codeberg.org/farooqkz/hugo-vitae-ng).__
+__The new official version is maintained by [@farooqkz](https://github.com/farooqkz) on [Codeberg](https://codeberg.org/farooqkz/hugo-vitae).__
 
-__You can find it here: https://codeberg.org/farooqkz/hugo-vitae-ng.__
+__You can find it here: https://codeberg.org/farooqkz/hugo-vitae.__
 
 ---
 
